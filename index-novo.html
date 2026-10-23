@@ -1,0 +1,2094 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14558F">
+<script>
+(function(){
+  var I192="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADm0lEQVR4nO3c0VFUQRCGUTAGDQ3jMBONw9RMwgerKArXFe5/70x3c8471NDzzVwWFh4/P31/gKM+7V4AvQmIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIh8iIB+/fy2ewljzQ/oTz0ausj8gLjU8IBeXjwuoSsMD+gVDZ1uckByWWBsQP+qR1XnGhvQHRo60cyAJLLMzID+S2FnGRjQG+PQ0CmmBSSLxaYF9C5qy40K6EAQGgrNCUgKW8wJ6DDlJYYEFEagocOGBMQuEwI65f5wCR3TPqATN15DB7QPqKkxsfYO6PRtWLOvk96m3TugjmZ086xxQBftxMoNHhBT14AuHf11n/zvz9y9oa4BddS9lZtaBrRgJ1Z+e946rJYBrbHyJ0x9G+oXULtZt1vwuzQLaPFmeEX2X80CWs/v+e/rFFC7zXjvgtt9gQ+9Atrl2L6u/KiN2gS0d7If4S45pkdAvfbjQ33b1COgCrwiu6lBQHWm+ZaV1FntGg0CauQDvj2yekDV5rjyV1rVvvabSgdUc4I3V1VzqQuUDqiLle8fqqZuQJVn5xXZs6IBFZ/aw4sV1l/qpYoG1MXKv+Ko6fHz0/fda3it8rw2+vL1x+4l3OAGIlIuINfPv9ScTK2Aas6IO2oFxH0FD1ihgApOp6BqUyoUEB1VCajawaqs1KxKBFRqIi3UmViJgOhrf0B1DlMvRea2PyAOq9DQ5oAqjIDEzoDUk9s+Q4+w9vY2tC2g7UeHU7iBJth4GvcE5Po53a6RbghIPZN4hM2x5WSuDsj1c6n1410akHrm8QibZvEpXReQ62ckN9BAK8/qooBcP4stG/iKgNQzmEfYWGvO7eUBuX42WjB8NxCRawNy/Wx39RZU/PcuNOIRRkRARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARH4DNIEH8EyO05kAAAAASUVORK5CYII=",I512="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAALWUlEQVR4nO3c2XFkNxZAwdLYINfkx3giP+TaODEfVLQosljrWwCcTAteYbkHjOjo337/488LAD3/OfsDADiHAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUALCj//3137M/AfiRALCXj+mvATAsAQCIEgB28fnh748AGJMAcAQNgAEJANsz7mEKAsDGfpr+qgCjEQCOowEwFAFgS0Y8TEQAOJRCwDgEgM08ONw1AAYhAGzDWIfpCAAnUAsYgQCwgRcGugbA6QQAIEoAeNfLb3l/BMC5BIC3vDnENQBOJAAAUQLA6zZ5v/sjAM4iAJxPA+AUAsCLTG2YnQDwis2nv5zA8QSAUWgAHEwAeJpJDWsQAAYiLXAkAeA5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",IM="data:image/png;base64,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";
+  var base=location.origin+location.pathname.replace(/[^\/]*$/,'');
+  var m={name:"Rumo aos Meus Sonhos",short_name:"Meus Sonhos",lang:"pt-BR",id:base,start_url:base,scope:base,display:"standalone",orientation:"portrait",background_color:"#F2F5F9",theme_color:"#14558F",
+    icons:[{src:I192,sizes:"192x192",type:"image/png",purpose:"any"},{src:I512,sizes:"512x512",type:"image/png",purpose:"any"},{src:IM,sizes:"512x512",type:"image/png",purpose:"maskable"}]};
+  var l=document.createElement('link');l.rel='manifest';
+  l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:'application/manifest+json'}));
+  document.head.appendChild(l);
+  var ic=document.createElement('link');ic.rel='icon';ic.href=I192;document.head.appendChild(ic);
+  var ai=document.createElement('link');ai.rel='apple-touch-icon';ai.href=I192;document.head.appendChild(ai);
+})();
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
+</script>
+<style>:root{padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}[hidden]{display:none!important}</style>
+<title>Rumo aos Meus Sonhos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: coluna única de celular, cabeçalho fixo com mês, navegação inferior de 5 abas e botão + flutuante.
+   Cores: neutros azulados (gelo/noite), azul glacial como acento, séries do gráfico e status em tokens separados. */
+:root {
+  --bg: #F2F5F9;
+  --surface: #FFFFFF;
+  --surface-2: #E9EEF5;
+  --ink: #0E1A2B;
+  --ink-2: #44546A;
+  --muted: #66748A;
+  --line: #DCE3EC;
+  --accent: #14558F;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E1EDF8;
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --good-fg: #0B6B2E; --good-bg: #E3F4E8;
+  --warn-fg: #8A5A00; --warn-bg: #FFF1D6;
+  --bad-fg: #B02A2A;  --bad-bg: #FBE4E4;
+  --info-fg: #14558F; --info-bg: #E1EDF8;
+  --shadow: 0 1px 2px rgba(14, 26, 43, .06), 0 6px 18px rgba(14, 26, 43, .06);
+  --f-display: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #09111D; --surface: #111C2C; --surface-2: #18263A; --ink: #E7EEF7; --ink-2: #A9B7C9;
+    --muted: #8696AB; --line: #223249; --accent: #5DB4F0; --accent-ink: #06213A; --accent-soft: #12304A;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --good-fg: #5BD686; --good-bg: #12301E; --warn-fg: #F2B94B; --warn-bg: #3A2B0B;
+    --bad-fg: #FF9A9A; --bad-bg: #3D1717; --info-fg: #8CCBF5; --info-bg: #12304A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #09111D; --surface: #111C2C; --surface-2: #18263A; --ink: #E7EEF7; --ink-2: #A9B7C9;
+  --muted: #8696AB; --line: #223249; --accent: #5DB4F0; --accent-ink: #06213A; --accent-soft: #12304A;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+  --good-fg: #5BD686; --good-bg: #12301E; --warn-fg: #F2B94B; --warn-bg: #3A2B0B;
+  --bad-fg: #FF9A9A; --bad-bg: #3D1717; --info-fg: #8CCBF5; --info-bg: #12304A;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 18px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 15px/1.45 var(--f-body);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 10; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+svg { display: block; }
+
+.gut { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 560px; margin: 0 auto; width: 100%; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* cabeçalho */
+#top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); }
+.top-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; font: 700 18px/1 var(--f-display); letter-spacing: -.01em; }
+.brand svg { flex: none; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); }
+.brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stepper { display: flex; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+.stepper button { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 999px; color: var(--ink-2); }
+.stepper button:disabled { opacity: .3; cursor: default; }
+.stepper .mlabel { width: auto; padding: 0 6px; font-weight: 600; font-size: 14px; color: var(--ink); min-width: 78px; }
+
+main { padding-top: 4px; padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px)); }
+main > .wrap { display: flex; flex-direction: column; gap: 14px; }
+
+/* cartões */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; min-width: 0; }
+.card.lift { box-shadow: var(--shadow); }
+.card h2 { margin: 0 0 10px; font: 600 13px/1.2 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.card h3 { margin: 0; font: 700 17px/1.25 var(--f-display); }
+.sub { color: var(--ink-2); font-size: 13px; }
+.muted { color: var(--muted); }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); min-width: 0; }
+.row:first-of-type { border-top: 0; }
+.row .l { min-width: 0; }
+.row .l small { display: block; color: var(--muted); font-size: 12.5px; }
+.row .v { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; text-align: right; }
+.row.total { border-top: 2px solid var(--ink); margin-top: 4px; padding-top: 12px; }
+.row.total .v { font: 700 22px/1.1 var(--f-display); }
+.row.total .l { font-weight: 600; }
+.neg { color: var(--bad-fg); }
+
+/* viagem */
+.hero { cursor: pointer; text-align: left; width: 100%; display: block; }
+.hero-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); }
+.hero-top b { color: var(--ink); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.big { font: 700 34px/1.05 var(--f-display); letter-spacing: -.02em; margin: 12px 0 2px; font-variant-numeric: tabular-nums; }
+.big .of { font: 500 15px/1.2 var(--f-body); letter-spacing: 0; color: var(--ink-2); margin-left: 4px; white-space: nowrap; }
+.bar { position: relative; height: 12px; border-radius: 6px; background: var(--surface-2); margin: 14px 0 8px; }
+.bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: var(--accent); min-width: 0; }
+.bar .tick { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); border-radius: 1px; opacity: .55; }
+.bar-foot { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--ink-2); flex-wrap: wrap; }
+.tick-label { font-size: 12px; color: var(--ink-2); }
+
+/* divisão do salário */
+.alloc { display: flex; gap: 2px; height: 14px; margin: 8px 0 12px; position: relative; }
+.alloc i { display: block; height: 100%; min-width: 0; border-radius: 3px; }
+.alloc .mk { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); opacity: .6; border-radius: 1px; }
+.legend { display: flex; flex-direction: column; gap: 6px; }
+.legend div { display: flex; align-items: center; gap: 8px; font-size: 14px; min-width: 0; }
+.legend .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.legend .lv { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* etiquetas */
+.pill { display: inline-flex; align-items: center; gap: 5px; border-radius: 999px; padding: 3px 10px 3px 8px; font-size: 12.5px; font-weight: 600; line-height: 1.3; white-space: nowrap; }
+.pill svg { width: 13px; height: 13px; flex: none; }
+.pill.good, .pill.ok { background: var(--good-bg); color: var(--good-fg); }
+.pill.warn { background: var(--warn-bg); color: var(--warn-fg); }
+.pill.bad { background: var(--bad-bg); color: var(--bad-fg); }
+.pill.info, .pill.neutral { background: var(--info-bg); color: var(--info-fg); }
+.pill.neutral { background: var(--surface-2); color: var(--ink-2); }
+.tag { font-size: 12px; font-weight: 600; color: var(--warn-fg); background: var(--warn-bg); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+
+/* avisos */
+.alerts { display: flex; flex-direction: column; gap: 4px; }
+.alert { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.alert:first-child { border-top: 0; padding-top: 2px; }
+.alert .ic { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; margin-top: 1px; }
+.alert .ic svg { width: 13px; height: 13px; }
+.alert.good .ic, .alert.ok .ic { background: var(--good-bg); color: var(--good-fg); }
+.alert.warn .ic { background: var(--warn-bg); color: var(--warn-fg); }
+.alert.bad .ic { background: var(--bad-bg); color: var(--bad-fg); }
+.alert.info .ic { background: var(--info-bg); color: var(--info-fg); }
+.link { color: var(--accent); font-weight: 600; font-size: 14px; padding: 8px 0 0; }
+
+/* listas de despesas */
+.list { display: flex; flex-direction: column; }
+.item { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); min-width: 0; width: 100%; text-align: left; }
+.item:first-child { border-top: 0; }
+.item .body { flex: 1; min-width: 0; }
+.item .t { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item .m { font-size: 13px; color: var(--ink-2); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.item .amt { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.item .amt.in { color: var(--good-fg); }
+.check { flex: none; width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--line); display: grid; place-items: center; color: transparent; background: var(--surface); }
+.check svg { width: 18px; height: 18px; }
+.check.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.item.paid .t { color: var(--ink-2); }
+
+/* categorias */
+.cats { display: flex; flex-direction: column; gap: 10px; }
+.cat .top { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; margin-bottom: 4px; }
+.cat .top b { font-variant-numeric: tabular-nums; font-weight: 600; }
+.cat .trk { height: 8px; border-radius: 4px; background: var(--surface-2); }
+.cat .trk i { display: block; height: 100%; border-radius: 4px; background: var(--s1); }
+
+/* controles */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 18px; border-radius: 14px; font-weight: 600; background: var(--surface-2); color: var(--ink); border: 1px solid transparent; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: transparent; border-color: var(--line); }
+.btn.danger { background: var(--bad-bg); color: var(--bad-fg); }
+.btn.block { width: 100%; }
+.btn.sm { min-height: 40px; padding: 0 14px; font-size: 14px; border-radius: 12px; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row > * { flex: 1 1 140px; }
+.seg { display: flex; background: var(--surface-2); border-radius: 12px; padding: 3px; gap: 3px; }
+.seg button { flex: 1; min-height: 40px; border-radius: 10px; font-weight: 600; font-size: 14px; color: var(--ink-2); padding: 0 8px; }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(14, 26, 43, .15); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { min-height: 38px; padding: 0 14px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); font-size: 14px; font-weight: 500; border: 1px solid transparent; }
+.chip[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field > label, .lbl { font-size: 13px; font-weight: 600; color: var(--ink-2); }
+.inp { width: 100%; min-height: 48px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2); padding: 0 14px; font-size: 16px; min-width: 0; }
+.inp:focus { outline: 2px solid var(--accent); outline-offset: 0; background: var(--surface); }
+.inp.money { font: 700 26px/1 var(--f-display); min-height: 58px; }
+textarea.inp { padding: 12px 14px; min-height: 120px; font-size: 14px; font-family: ui-monospace, monospace; }
+.hint { font-size: 12.5px; color: var(--muted); }
+.err { color: var(--bad-fg); font-size: 13.5px; font-weight: 600; min-height: 0; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.sw-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; }
+.switch { width: 50px; height: 30px; border-radius: 15px; background: var(--line); position: relative; flex: none; transition: background .15s; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .3); transition: transform .15s; }
+.switch[aria-checked="true"] { background: var(--accent); }
+.switch[aria-checked="true"]::after { transform: translateX(20px); }
+details > summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--accent); min-height: 40px; display: flex; align-items: center; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary { margin-bottom: 8px; }
+details > .stack { display: flex; flex-direction: column; gap: 14px; }
+
+/* cartões de mês */
+.mgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; margin-top: 12px; }
+.mgrid div { min-width: 0; }
+.mgrid dt { font-size: 12px; color: var(--ink-2); }
+.mgrid dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.mcard { width: 100%; text-align: left; display: block; }
+.mcard.sel { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.mcard .hd { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+
+/* gráficos */
+.chart { width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-2); font-family: var(--f-body); }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .axis { stroke: var(--line); stroke-width: 1.5; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-2); margin-top: 8px; }
+.chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.chart-read { margin-top: 10px; padding: 10px 12px; background: var(--surface-2); border-radius: 12px; font-size: 13.5px; }
+.chart-read b { display: block; margin-bottom: 2px; }
+.hit { fill: transparent; cursor: pointer; }
+
+/* navegação */
+#nav { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 6; }
+#nav .in { display: grid; grid-template-columns: repeat(6, 1fr); }
+#nav button { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 9px 0 8px; font-size: 11.5px; font-weight: 600; color: var(--muted); min-height: 56px; }
+#nav button svg { width: 24px; height: 24px; }
+#nav button[aria-current="page"] { color: var(--accent); }
+#fab { position: fixed; z-index: 7; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(76px + env(safe-area-inset-bottom, 0px)); width: 58px; height: 58px; border-radius: 18px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; box-shadow: 0 6px 16px rgba(14, 26, 43, .3); }
+#fab svg { width: 28px; height: 28px; }
+
+/* painel inferior */
+#scrim { position: fixed; inset: 0; background: rgba(5, 12, 22, .5); z-index: 20; }
+#sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 21; max-height: 94%; overflow-y: auto; background: var(--surface); border-radius: 22px 22px 0 0; box-shadow: 0 -8px 30px rgba(0, 0, 0, .25); animation: up .2s ease-out; overscroll-behavior: contain; }
+#sheet .sh { max-width: 560px; margin: 0 auto; padding-top: 10px; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 16px; }
+#sheet .grab { width: 40px; height: 4px; border-radius: 2px; background: var(--line); margin: 0 auto 2px; }
+#sheet .hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#sheet .hd h3 { font: 700 20px/1.2 var(--f-display); margin: 0; }
+#sheet .x { width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); display: grid; place-items: center; color: var(--ink-2); }
+@keyframes up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+#toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(150px + env(safe-area-inset-bottom, 0px)); z-index: 30; background: var(--ink); color: var(--bg); padding: 11px 16px; border-radius: 12px; font-size: 14px; font-weight: 500; max-width: min(92vw, 420px); text-align: center; pointer-events: none; opacity: 0; transition: opacity .2s; }
+#toast.on { opacity: 1; }
+.empty { text-align: center; padding: 18px 8px; color: var(--ink-2); font-size: 14px; }
+.syncline { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); padding: 2px 4px; }
+.syncline i { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+.syncline.cloud i { background: var(--good-fg); }
+.syncline.local i, .syncline.error i { background: var(--warn-fg); }
+.rec { display: flex; flex-direction: column; gap: 10px; padding: 12px 0; border-top: 1px solid var(--line); }
+.rec:first-child { border-top: 0; }
+.rec .rt { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  #sheet { animation: none; }
+  .switch, .switch::after, #toast { transition: none; }
+}
+@media (max-width: 360px) {
+  .big { font-size: 30px; }
+  .big .of { display: block; margin: 4px 0 0; }
+}
+
+.stats3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.stats3 div { min-width: 0; }
+.stats3 span { display: block; font-size: 12px; color: var(--ink-2); }
+.stats3 b { font: 700 17px/1.2 var(--f-display); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.itembtn { flex: 1; display: flex; align-items: center; gap: 12px; min-width: 0; text-align: left; }
+.itembtn .body { flex: 1; min-width: 0; }
+.item .body { flex: 1; min-width: 0; }
+.item .body .t, .item .body .m { display: block; }
+.item .body .m { display: flex; }
+.tag.info { color: var(--info-fg); background: var(--info-bg); }
+.mgrid { margin-bottom: 0; margin-left: 0; margin-right: 0; }
+.syncline.rt-live i { background: var(--good-fg); }
+.syncline.rt-saving i, .syncline.rt-connecting i, .syncline.rt-offline i { background: var(--warn-fg); }
+.syncline.rt-denied i { background: var(--bad-fg); }
+.chip:disabled { opacity: .35; cursor: default; }
+#tour { position: fixed; inset: 0; z-index: 50; }
+#tour .tb { position: absolute; inset: 0; }
+#tour .th { position: absolute; border-radius: 14px; border: 2px solid #fff; box-shadow: 0 0 0 9999px rgba(5, 12, 22, .62); pointer-events: none; }
+#tour .tc { position: absolute; left: 16px; right: 16px; max-width: 520px; margin: 0 auto; background: var(--surface); border-radius: 18px; padding: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); display: flex; flex-direction: column; gap: 10px; }
+#tour .tc h3 { margin: 0; font: 700 18px/1.2 var(--f-display); }
+#tour .tc p { margin: 0; color: var(--ink-2); }
+#tour .dots { font-size: 12px; color: var(--muted); font-weight: 600; }
+.chat { display: flex; flex-direction: column; gap: 10px; }
+.msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; font-size: 15px; line-height: 1.45; overflow-wrap: anywhere; }
+.msg.u { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 5px; }
+.msg.a { align-self: flex-start; background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 5px; }
+.composer { position: sticky; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); display: flex; gap: 8px; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+.composer .inp { flex: 1; }
+.composer .btn { flex: none; }
+
+</style>
+</head><body>
+<header id="top"></header>
+<main><div class="wrap gut" id="view"></div></main>
+<button id="fab" aria-label="Registrar despesa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+<nav id="nav" aria-label="Navegação principal"></nav>
+<div id="scrim" hidden></div>
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Painel de registro" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+/* Rumo ao Chile - regras de cálculo (sem nada de tela, para poder ser testado) */
+(function (root) {
+  'use strict';
+
+  var FUND_CAT = 'Viagem para o Chile';
+  var DEFAULT_CATS = ['Transporte', 'Alimentação', 'Internet', 'Faculdade', 'Lazer',
+    'Contas de casa', 'Compras pessoais', FUND_CAT, 'Outros'];
+
+  var MN = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
+    'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  var MS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+
+  /* ---------- utilitários ---------- */
+  function r2(n) { return Math.round((Number(n) + Number.EPSILON) * 100) / 100; }
+  function sum(a, f) { var s = 0; for (var i = 0; i < a.length; i++) s += f ? f(a[i]) : a[i]; return s; }
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function todayStr(d) {
+    d = d || new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  function mk(d) { return String(d).slice(0, 7); }
+  function addMonths(m, n) {
+    var p = m.split('-').map(Number);
+    var t = p[0] * 12 + (p[1] - 1) + n;
+    return Math.floor(t / 12) + '-' + pad((t % 12) + 1);
+  }
+  function monthDiff(a, b) {
+    var x = a.split('-').map(Number), y = b.split('-').map(Number);
+    return (y[0] - x[0]) * 12 + (y[1] - x[1]);
+  }
+  function monthRange(a, b) {
+    var out = [];
+    for (var m = a; monthDiff(m, b) >= 0 && out.length < 240; m = addMonths(m, 1)) out.push(m);
+    return out;
+  }
+  function daysBetween(a, b) {
+    var x = a.split('-').map(Number), y = b.split('-').map(Number);
+    return Math.round((Date.UTC(y[0], y[1] - 1, y[2]) - Date.UTC(x[0], x[1] - 1, x[2])) / 86400000);
+  }
+  function maxMonth(a, b) { return a > b ? a : b; }
+  function uid() { return 'x' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+
+  var nf = null;
+  try { nf = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }); } catch (e) { nf = null; }
+  function brl(n) {
+    n = r2(n || 0);
+    if (n === 0) n = 0; // evita "-R$ 0,00"
+    if (nf) return nf.format(n);
+    var s = Math.abs(n).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return (n < 0 ? '-' : '') + 'R$ ' + s;
+  }
+  function brlShort(n) { return 'R$ ' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+  function monthName(M) { var p = M.split('-').map(Number); return MN[p[1] - 1] + ' de ' + p[0]; }
+  function monthLbl(M) {
+    var p = M.split('-').map(Number);
+    return MS[p[1] - 1].charAt(0).toUpperCase() + MS[p[1] - 1].slice(1) + ' ' + p[0];
+  }
+  function monthOnly(M) { return MN[Number(M.split('-')[1]) - 1]; }
+  function fmtDate(d) { var p = String(d).split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+
+  /* "1.500,50" / "11,60" / "7.60" / "R$ 100" -> número (ou NaN) */
+  function parseBR(s) {
+    s = String(s == null ? '' : s).replace(/[^\d.,-]/g, '');
+    if (!s) return NaN;
+    if (s.indexOf(',') >= 0) s = s.replace(/\./g, '').replace(',', '.');
+    else {
+      var p = s.split('.');
+      if (p.length > 2) s = s.replace(/\./g, '');
+      else if (p.length === 2 && p[1].length === 3) s = s.replace('.', '');
+    }
+    var v = parseFloat(s);
+    return isFinite(v) ? v : NaN;
+  }
+  function toInput(n) { return (Number(n) || 0).toFixed(2).replace('.', ','); }
+
+  /* ---------- estado inicial ---------- */
+  function defaultState() {
+    return {
+      v: 1,
+      updated: 0,
+      settings: {
+        salary: 1000,
+        fare: 7.6,
+        uber: 4,
+        days: 3,
+        weeks: 4.33,
+        monthlyGoal: 500,
+        startMonth: '2026-11',
+        ticketsGoal: 1500,
+        spendGoal: 2000,
+        ticketsDeadline: '2027-05-31',
+        finalDeadline: '2027-06-30',
+        goalName: 'Viagem para o Chile',
+        goalType: 'viagem'
+      },
+      recurring: [
+        { id: 'r_transp', name: 'Transporte para o trabalho', cat: 'Transporte', kind: 'transport', amount: 0, active: true, confirmed: true },
+        { id: 'r_food', name: 'Alimentação', cat: 'Alimentação', kind: 'fixed', amount: 100, active: true, confirmed: true },
+        { id: 'r_net', name: 'Internet', cat: 'Internet', kind: 'fixed', amount: 100, active: false, confirmed: false }
+      ],
+      cats: DEFAULT_CATS.slice(),
+      expenses: [],
+      incomes: [],
+      savings: [],
+      plan: {}
+    };
+  }
+
+  function migrate(s) {
+    var d = defaultState();
+    if (!s || typeof s !== 'object') return d;
+    var out = {
+      v: 1,
+      updated: Number(s.updated) || 0,
+      settings: Object.assign({}, d.settings, s.settings || {}),
+      recurring: Array.isArray(s.recurring) ? s.recurring : d.recurring,
+      cats: Array.isArray(s.cats) && s.cats.length ? s.cats : d.cats,
+      expenses: Array.isArray(s.expenses) ? s.expenses : [],
+      incomes: Array.isArray(s.incomes) ? s.incomes : [],
+      savings: Array.isArray(s.savings) ? s.savings : [],
+      plan: s.plan && typeof s.plan === 'object' ? s.plan : {}
+    };
+    if (out.cats.indexOf(FUND_CAT) < 0) out.cats.push(FUND_CAT);
+    return out;
+  }
+
+  /* ---------- despesas do mês ---------- */
+  function transportDaily(st) { return r2(Number(st.fare) + Number(st.uber)); }
+  function transportMonthly(st) { return r2((Number(st.fare) + Number(st.uber)) * Number(st.days) * Number(st.weeks)); }
+  function recAmount(S, r) { return r.kind === 'transport' ? transportMonthly(S.settings) : r2(r.amount); }
+
+  /* Itens do mês = despesas registradas + despesas que se repetem e ainda não foram registradas
+     naquele mês. Se uma recorrente já foi registrada (recId), ela substitui a prevista: nunca conta 2x. */
+  function monthItems(S, M) {
+    var items = [];
+    var regs = S.expenses.filter(function (e) { return mk(e.date) === M; });
+    var used = {};
+    regs.forEach(function (e) { if (e.recId) used[e.recId] = true; });
+    if (M >= S.settings.startMonth) {
+      S.recurring.forEach(function (r) {
+        if (!r.active || used[r.id]) return;
+        items.push({
+          virtual: true, id: 'v_' + r.id + '_' + M, recId: r.id, name: r.name, cat: r.cat,
+          amount: recAmount(S, r), type: 'fixa', status: 'pendente', confirmed: r.confirmed !== false,
+          date: M + '-01', note: ''
+        });
+      });
+    }
+    regs.forEach(function (e) {
+      items.push({
+        virtual: false, id: e.id, recId: e.recId, name: e.name, cat: e.cat, amount: r2(e.amount),
+        type: e.type, status: e.status, confirmed: e.confirmed !== false, date: e.date, note: e.note || ''
+      });
+    });
+    return items;
+  }
+
+  function planFor(S, M) {
+    var p = S.plan[M] || {};
+    var started = M >= S.settings.startMonth;
+    var hasS = p.salary != null && p.salary !== '', hasG = p.goal != null && p.goal !== '';
+    return {
+      salary: hasS ? Number(p.salary) : (started ? Number(S.settings.salary) : 0),
+      goal: hasG ? Number(p.goal) : (started ? Number(S.settings.monthlyGoal) : 0),
+      customSalary: hasS, customGoal: hasG
+    };
+  }
+
+  function monthStats(S, M, today) {
+    var cur = mk(today || todayStr());
+    var items = monthItems(S, M);
+    // Despesas "Viagem para o Chile" saem do dinheiro guardado da viagem, não do salário.
+    var budget = items.filter(function (i) { return i.cat !== FUND_CAT; });
+    var fund = items.filter(function (i) { return i.cat === FUND_CAT; });
+    var planned = r2(sum(budget, function (i) { return i.amount; }));
+    var paid = r2(sum(budget.filter(function (i) { return i.status === 'paga'; }), function (i) { return i.amount; }));
+    var estimates = r2(sum(budget.filter(function (i) { return !i.confirmed; }), function (i) { return i.amount; }));
+    var fundPaid = r2(sum(fund.filter(function (i) { return i.status === 'paga'; }), function (i) { return i.amount; }));
+    var received = r2(sum(S.incomes.filter(function (x) { return mk(x.date) === M; }), function (x) { return x.amount; }));
+    var sv = S.savings.filter(function (x) { return mk(x.date) === M; });
+    var savedTrip = r2(sum(sv.filter(function (x) { return x.dest !== 'reserva'; }), function (x) { return x.amount; }));
+    var savedReserve = r2(sum(sv.filter(function (x) { return x.dest === 'reserva'; }), function (x) { return x.amount; }));
+    var savedAll = r2(savedTrip + savedReserve);
+    var pl = planFor(S, M);
+    var available = r2(received - paid - savedAll);
+    var incomeRef = Math.max(received, pl.salary);
+    var margin = r2(incomeRef - planned);
+    var free = r2(margin - Math.max(pl.goal, savedAll));
+    return {
+      M: M, rel: M > cur ? 'future' : (M === cur ? 'current' : 'past'),
+      items: items, planned: planned, paid: paid, pending: r2(planned - paid), estimates: estimates,
+      fundPaid: fundPaid, received: received, plannedSalary: pl.salary, goal: pl.goal,
+      savedTrip: savedTrip, savedReserve: savedReserve, savedAll: savedAll,
+      available: available, incomeRef: incomeRef, margin: margin, free: free,
+      feasible: pl.goal <= 0 || margin >= pl.goal
+    };
+  }
+
+  function catTotals(S, M) {
+    var map = {};
+    monthItems(S, M).forEach(function (i) {
+      var c = map[i.cat] || (map[i.cat] = { cat: i.cat, total: 0, paid: 0 });
+      c.total = r2(c.total + i.amount);
+      if (i.status === 'paga') c.paid = r2(c.paid + i.amount);
+    });
+    return Object.keys(map).map(function (k) { return map[k]; })
+      .filter(function (c) { return c.total > 0; })
+      .sort(function (a, b) { return b.total - a.total; });
+  }
+
+  /* ---------- viagem ---------- */
+  function refMonth(S, today) { return maxMonth(mk(today || todayStr()), S.settings.startMonth); }
+
+  function tripStats(S, today) {
+    today = today || todayStr();
+    var st = S.settings;
+    var goal = r2(Number(st.ticketsGoal) + Number(st.spendGoal));
+    var trip = S.savings.filter(function (x) { return x.dest !== 'reserva'; });
+    var saved = r2(sum(trip, function (x) { return x.amount; }));
+    var spent = r2(sum(S.expenses.filter(function (e) { return e.cat === FUND_CAT && e.status === 'paga'; }), function (e) { return e.amount; }));
+    var R = refMonth(S, today);
+    var remaining = r2(Math.max(0, goal - saved));
+    var ticketsRem = r2(Math.max(0, Number(st.ticketsGoal) - saved));
+    var mTickets = Math.max(0, monthDiff(R, mk(st.ticketsDeadline)) + 1);
+    var mFinal = Math.max(0, monthDiff(R, mk(st.finalDeadline)) + 1);
+    var needTickets = ticketsRem <= 0 ? 0 : (mTickets > 0 ? ticketsRem / mTickets : Infinity);
+    var needFinal = remaining <= 0 ? 0 : (mFinal > 0 ? remaining / mFinal : Infinity);
+    var needMonth = Math.max(needTickets, needFinal);
+    var weeks = Number(st.weeks) || 4.33;
+    var from = today > R + '-01' ? today : R + '-01';
+    return {
+      goal: goal, saved: saved, spent: spent, inFund: r2(saved - spent), remaining: remaining,
+      pct: goal > 0 ? Math.min(100, (saved / goal) * 100) : 0,
+      ticketsMark: goal > 0 ? (Number(st.ticketsGoal) / goal) * 100 : 0,
+      ticketsRem: ticketsRem, ticketsDone: ticketsRem <= 0,
+      refMonth: R, monthsToTickets: mTickets, monthsToFinal: mFinal,
+      needTickets: isFinite(needTickets) ? r2(needTickets) : null,
+      needFinal: isFinite(needFinal) ? r2(needFinal) : null,
+      needMonth: isFinite(needMonth) ? r2(needMonth) : null,
+      needWeek: isFinite(needMonth) ? r2(needMonth / weeks) : null,
+      daysToTickets: daysBetween(from, st.ticketsDeadline),
+      daysToFinal: daysBetween(from, st.finalDeadline),
+      ticketsOverdue: ticketsRem > 0 && mTickets === 0,
+      finalOverdue: remaining > 0 && mFinal === 0,
+      done: goal > 0 && saved >= goal
+    };
+  }
+
+  function savedTripIn(S, M) {
+    return r2(sum(S.savings.filter(function (x) { return x.dest !== 'reserva' && mk(x.date) === M; }), function (x) { return x.amount; }));
+  }
+
+  /* Ritmo real = média guardada por mês completo (do início do plano até o mês anterior ao atual). */
+  function paceReal(S, today) {
+    var cur = mk(today || todayStr());
+    var n = monthDiff(S.settings.startMonth, cur);
+    if (n < 1) return null;
+    var tot = sum(S.savings.filter(function (x) { return x.dest !== 'reserva' && mk(x.date) < cur; }), function (x) { return x.amount; });
+    return r2(tot / n);
+  }
+
+  /* Simula mês a mês quando a meta fecha. rateFn(M) = quanto se guarda em cada mês. */
+  function simulate(S, today, rateFn) {
+    var t = tripStats(S, today);
+    if (t.done) return { done: true, month: null };
+    var cum = t.saved, R = t.refMonth;
+    for (var i = 0; i < 120; i++) {
+      var M = addMonths(R, i);
+      var add = rateFn(M);
+      if (i === 0) add = Math.max(0, add - savedTripIn(S, M));
+      cum += add;
+      if (cum >= t.goal - 0.005) return { done: false, month: M };
+    }
+    return { done: false, month: null };
+  }
+
+  function projection(S, today) {
+    var pace = paceReal(S, today);
+    if (pace != null) {
+      var a = simulate(S, today, function () { return pace; });
+      return { basis: 'real', rate: pace, done: a.done, month: a.month };
+    }
+    var p = simulate(S, today, function (M) { return planFor(S, M).goal; });
+    return { basis: 'plan', rate: Number(S.settings.monthlyGoal), done: p.done, month: p.month };
+  }
+
+  /* ---------- planejamento ---------- */
+  function monthList(S) {
+    var all = [S.settings.startMonth, mk(S.settings.finalDeadline), mk(S.settings.ticketsDeadline)];
+    S.expenses.concat(S.incomes, S.savings).forEach(function (x) { if (x.date) all.push(mk(x.date)); });
+    all.sort();
+    return monthRange(all[0], all[all.length - 1]);
+  }
+  function planMonths(S) { return monthRange(S.settings.startMonth, mk(S.settings.finalDeadline)); }
+
+  function chartSeries(S, today) {
+    var cur = mk(today || todayStr());
+    var months = planMonths(S);
+    var cumPlan = 0, cumAct = 0, rows = [];
+    // economias anteriores ao início do plano contam como já guardadas
+    cumAct = sum(S.savings.filter(function (x) { return x.dest !== 'reserva' && mk(x.date) < months[0]; }), function (x) { return x.amount; });
+    months.forEach(function (M) {
+      var st = monthStats(S, M, today);
+      cumPlan = r2(cumPlan + st.goal);
+      cumAct = r2(cumAct + st.savedTrip);
+      rows.push({ M: M, planned: st.planned, goal: st.goal, saved: st.savedTrip, paid: st.paid,
+        cumPlan: cumPlan, cumAct: M <= cur ? cumAct : null, cumFc: null });
+    });
+    // previsão: parte do real acumulado até o mês atual e segue com as metas planejadas
+    var base = 0, lastIdx = -1;
+    rows.forEach(function (r, i) { if (r.cumAct != null) lastIdx = i; });
+    if (lastIdx >= 0) {
+      base = rows[lastIdx].cumAct;
+      rows[lastIdx].cumFc = base;
+      for (var i = lastIdx + 1; i < rows.length; i++) { base = r2(base + rows[i].goal); rows[i].cumFc = base; }
+    }
+    return rows;
+  }
+
+  /* ---------- avisos (só com os números registrados) ---------- */
+  function alerts(S, M, today) {
+    today = today || todayStr();
+    var out = [];
+    var st = monthStats(S, M, today), tr = tripStats(S, today), pj = projection(S, today);
+    var name = monthName(M), only = monthOnly(M);
+    var started = M >= S.settings.startMonth;
+
+    if (tr.done) out.push({ kind: 'good', text: 'Meta atingida: você já guardou ' + brl(tr.saved) + ' dos ' + brl(tr.goal) + '.' });
+    else if (tr.saved > 0) out.push({ kind: 'good', text: 'Você já guardou ' + Math.floor(tr.pct) + '% da sua meta (' + brl(tr.saved) + ' de ' + brl(tr.goal) + ').' });
+    else out.push({ kind: 'info', text: 'Você ainda não guardou nada para a meta. Para chegar na meta, o ritmo é de ' + (tr.needMonth != null ? brl(tr.needMonth) : '—') + ' por mês.' });
+
+    if (started && st.goal > 0) {
+      if (!st.feasible) out.push({ kind: 'bad', text: 'Sua meta de guardar ' + brl(st.goal) + ' em ' + only + ' é maior do que o dinheiro disponível: depois das despesas sobram ' + brl(Math.max(0, st.margin)) + '.' });
+      else out.push({ kind: 'ok', text: 'Guardar ' + brl(st.goal) + ' em ' + only + ' é possível: depois das despesas previstas sobram ' + brl(st.margin) + ', e ' + brl(Math.max(0, st.free)) + ' ficam livres.' });
+    }
+
+    if (!tr.done) {
+      if (pj.month) {
+        var late = pj.month > mk(S.settings.finalDeadline);
+        var basis = pj.basis === 'real' ? 'no seu ritmo real de ' + brl(pj.rate) + ' por mês' : 'guardando a meta de ' + brl(pj.rate) + ' por mês';
+        out.push({ kind: late ? 'warn' : 'ok', text: (late ? 'Atenção: ' : 'Se continuar economizando assim, ') + basis + ', a meta será atingida em ' + monthName(pj.month) + (late ? ', depois do prazo final.' : '.') });
+      } else if (pj.basis === 'real') {
+        out.push({ kind: 'warn', text: 'No seu ritmo real de ' + brl(pj.rate) + ' por mês, a meta não fecha. Registre o que guardar ou ajuste a meta.' });
+      }
+    }
+
+    if (tr.ticketsRem > 0) {
+      if (tr.ticketsOverdue) out.push({ kind: 'bad', text: 'O prazo das passagens (' + fmtDate(S.settings.ticketsDeadline) + ') já passou e ainda faltam ' + brl(tr.ticketsRem) + '.' });
+      else out.push({ kind: 'info', text: 'Você ainda precisa juntar ' + brl(tr.ticketsRem) + ' para comprar as passagens até ' + monthName(mk(S.settings.ticketsDeadline)) + '.' });
+    }
+
+    var planGoal = Number(S.settings.monthlyGoal);
+    if (!tr.done && tr.needMonth != null && tr.needMonth > planGoal + 0.005) {
+      out.push({ kind: 'warn', text: 'Para fechar a meta no prazo é preciso guardar ' + brl(tr.needMonth) + ' por mês, mais que os ' + brl(planGoal) + ' planejados.' });
+    }
+
+    var prev = addMonths(M, -1);
+    var curT = (catTotals(S, M).filter(function (c) { return c.cat === 'Transporte'; })[0] || { total: 0 }).total;
+    var prevT = (catTotals(S, prev).filter(function (c) { return c.cat === 'Transporte'; })[0] || { total: 0 }).total;
+    if (prevT > 0 && curT > prevT + 0.005) out.push({ kind: 'warn', text: 'Você gastou mais com transporte em ' + only + ': ' + brl(curT) + ', ' + brl(curT - prevT) + ' a mais que em ' + monthOnly(prev) + '.' });
+
+    if (st.estimates > 0) {
+      var names = st.items.filter(function (i) { return !i.confirmed && i.cat !== FUND_CAT; }).map(function (i) { return i.name; });
+      out.push({ kind: 'info', text: brl(st.estimates) + ' das despesas de ' + only + ' ainda são estimativas (' + names.join(', ') + ').' });
+    }
+    if (st.available < -0.005) out.push({ kind: 'warn', text: 'O saldo disponível de ' + only + ' está negativo (' + brl(st.available) + '): você pagou ou guardou mais do que registrou como recebido.' });
+    if (started && st.rel !== 'future' && st.received === 0) out.push({ kind: 'info', text: 'Você ainda não registrou o salário de ' + name + '.' });
+
+    var order = { bad: 0, warn: 1, info: 2, ok: 3, good: 3 };
+    return out.map(function (a, i) { a.i = i; return a; })
+      .sort(function (a, b) { return order[a.kind] - order[b.kind] || a.i - b.i; });
+  }
+
+  /* ---------- operações (cadastrar / editar / excluir) ---------- */
+  function upsert(list, obj) {
+    if (!obj.id) obj.id = uid();
+    for (var i = 0; i < list.length; i++) if (list[i].id === obj.id) { list[i] = obj; return obj; }
+    list.push(obj);
+    return obj;
+  }
+  function removeById(list, id) {
+    for (var i = 0; i < list.length; i++) if (list[i].id === id) { list.splice(i, 1); return true; }
+    return false;
+  }
+  function togglePaid(S, item, dateIfNew) {
+    if (item.virtual) {
+      return upsert(S.expenses, {
+        id: uid(), name: item.name, amount: item.amount, cat: item.cat, date: dateIfNew,
+        type: 'fixa', status: 'paga', confirmed: item.confirmed, note: '', recId: item.recId
+      });
+    }
+    var e = S.expenses.filter(function (x) { return x.id === item.id; })[0];
+    if (e) e.status = e.status === 'paga' ? 'pendente' : 'paga';
+    return e;
+  }
+
+  /* Meses mostrados nos cartões do Plano: do início até o prazo final (ou até o último mês ajustado),
+     mais `extra` meses pedidos pela pessoa. Não grava nada: só calcula a lista. */
+  function planMonthsFor(S, extra) {
+    var end = mk(S.settings.finalDeadline);
+    Object.keys(S.plan).forEach(function (k) { if (/^\d{4}-\d{2}$/.test(k) && k > end) end = k; });
+    if (extra > 0) end = addMonths(end, extra);
+    return monthRange(S.settings.startMonth, end);
+  }
+
+  /* ---------- Assistente Financeiro: reconhece perguntas e calcula tudo localmente (sem internet, sem API) ---------- */
+  var MONTHS_N = ['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  var WORDN = { um: 1, uma: 1, dois: 2, duas: 2, tres: 3, quatro: 4, cinco: 5, seis: 6, sete: 7, oito: 8, nove: 9, dez: 10, onze: 11, doze: 12 };
+
+  function norm(s) {
+    var t = String(s == null ? '' : s).toLowerCase();
+    try { t = t.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); } catch (e) { /* sem normalize */ }
+    return t;
+  }
+  function wnum(s) { return WORDN[s] != null ? WORDN[s] : parseFloat(String(s).replace(',', '.')); }
+  function mask(t, s, e) { return t.slice(0, s) + new Array(e - s + 1).join(' ') + t.slice(e); }
+  function plural(n, a, b) { return n + ' ' + (n === 1 ? a : b); }
+  function durTxt(n) {
+    if (n < 12) return plural(n, 'mês', 'meses');
+    var y = Math.floor(n / 12), m = n % 12, p = [plural(y, 'ano', 'anos')];
+    if (m) p.push(plural(m, 'mês', 'meses'));
+    return n + ' meses (' + p.join(' e ') + ')';
+  }
+
+  /* Separa de uma pergunta: data (mês/ano), prazo (N meses/anos/semanas) e valores em reais. */
+  function parseQuestion(raw, Rm, ty) {
+    var t = norm(raw), q = { n: t, date: null, dur: null, money: [] };
+    var m, mo, y, re;
+
+    // 1) data: dd/mm/aaaa, mm/aaaa, "dezembro de 2027", "dezembro do ano que vem", "fim do ano"
+    if ((m = /\b(\d{1,2})\/(\d{1,2})\/(20\d{2})\b/.exec(t))) {
+      mo = +m[2]; y = +m[3];
+      if (mo >= 1 && mo <= 12) { q.date = y + '-' + pad(mo); t = mask(t, m.index, m.index + m[0].length); }
+    } else if ((m = /\b(\d{1,2})\/(20\d{2})\b/.exec(t))) {
+      mo = +m[1]; y = +m[2];
+      if (mo >= 1 && mo <= 12) { q.date = y + '-' + pad(mo); t = mask(t, m.index, m.index + m[0].length); }
+    } else {
+      re = new RegExp('\\b(' + MONTHS_N.join('|') + ')\\b(?:\\s*(?:de|do|/)?\\s*(20\\d{2}))?(\\s+(?:do|de)\\s+ano\\s+que\\s+vem)?');
+      if ((m = re.exec(t))) {
+        mo = MONTHS_N.indexOf(m[1]) + 1;
+        if (m[2]) y = +m[2];
+        else if (m[3]) y = ty + 1;
+        else { y = +Rm.slice(0, 4); if (pad(mo) < Rm.slice(5)) y += 1; }
+        q.date = y + '-' + pad(mo);
+        t = mask(t, m.index, m.index + m[0].length);
+      } else if ((m = /\b(fim|final) do ano\b/.exec(t))) {
+        y = ty; if (y + '-12' < Rm) y += 1;
+        q.date = y + '-12';
+        t = mask(t, m.index, m.index + m[0].length);
+      }
+    }
+
+    // 2) prazo: "8 meses", "3 anos", "um ano", "10 semanas", "meio ano"
+    if ((m = /\b(\d+(?:,\d+)?|um|uma|dois|duas|tres|quatro|cinco|seis|sete|oito|nove|dez|onze|doze)\s+(anos?|meses|mes|semanas?)\b/.exec(t))) {
+      var v = wnum(m[1]), u = m[2].charAt(0);
+      if (v > 0) {
+        if (u === 's') q.dur = { unit: 'w', n: v };
+        else q.dur = { unit: 'm', n: Math.max(1, Math.round(u === 'a' ? v * 12 : v)) };
+      }
+      t = mask(t, m.index, m.index + m[0].length);
+    } else if ((m = /\bmeio ano\b/.exec(t))) {
+      q.dur = { unit: 'm', n: 6 };
+      t = mask(t, m.index, m.index + m[0].length);
+    }
+
+    // 3) valores: R$ 1.500 | 1500 reais | R$ 1.250,50 | 250 por mês | 2 mil
+    var rm = /(r\$\s*)?(\d{1,3}(?:\.\d{3})+(?:,\d{1,2})?|\d+(?:[.,]\d{1,2})?)(\s*mil\b)?(\s*(?:reais|real)\b)?(\s*%)?/g, k;
+    while ((k = rm.exec(t))) {
+      if (k[5]) continue;
+      var val = parseBR(k[2]);
+      if (isNaN(val)) continue;
+      if (k[3]) val *= 1000;
+      var after = t.slice(rm.lastIndex, rm.lastIndex + 30), before = t.slice(Math.max(0, k.index - 24), k.index), role = 'plain';
+      if (/^\s*(por|ao|a cada|\/)\s*mes\b/.test(after) || /^\s*(mensais|mensal)\b/.test(after)) role = 'month';
+      else if (/^\s*(por|ao|a cada|\/)\s*semana\b/.test(after) || /^\s*(semanais|semanal)\b/.test(after)) role = 'week';
+      else if (/\bfalt\w*[^\d]{0,14}$/.test(before)) role = 'remaining';
+      else if (/\b(meta|objetivo|sonho)[^\d]{0,14}$/.test(before)) role = 'goal';
+      else if (/\b(tenho|guardei|economizei|acumulei|juntei|guardado)[^\d]{0,14}$/.test(before)) role = 'saved';
+      q.money.push({ role: role, v: val, c: Math.round(val * 100) });
+    }
+    return q;
+  }
+
+  var ASK_HELP = 'Posso responder com os números do seu app e fazer contas com valores que você escrever. Exemplos:\n' +
+    '• "Quanto falta para minha meta?" / "Qual porcentagem já alcancei?"\n' +
+    '• "Se eu guardar R$ 250 por mês, em quanto tempo atinjo a meta?"\n' +
+    '• "Se eu guardar R$ 100, R$ 200 ou R$ 300 por mês, qual a diferença no prazo?"\n' +
+    '• "Quanto preciso guardar por mês até dezembro de 2027?" (ou "por semana")\n' +
+    '• "Se eu guardar R$ 300 por mês durante 8 meses, quanto terei?"\n' +
+    '• "Quanto terei guardado daqui a 6 meses?"\n' +
+    '• "Quando vou atingir a meta?" / "Como estão as despesas do mês?"\n' +
+    'Você pode usar valores seus na pergunta, como "faltam R$ 1.250" ou "minha meta é R$ 7.000".';
+
+  function ask(S, text, today) {
+    today = today || todayStr();
+    var raw = String(text == null ? '' : text).trim();
+    if (!raw) return 'Escreva uma pergunta para eu poder ajudar.';
+    var st = S.settings, tr = tripStats(S, today), Rm = tr.refMonth;
+    var q = parseQuestion(raw, Rm, Number(today.slice(0, 4))), n = q.n;
+    var wpm = Number(st.weeks) || 4.33, wpmTxt = String(wpm).replace('.', ',');
+    function C(x) { return Math.round(Number(x) * 100); }
+    function F(c) { return brl(c / 100); }
+    function role(r) { var a = q.money.filter(function (x) { return x.role === r; }); return a.length ? a[0].c : null; }
+
+    // dados reais do app (e valores que a pessoa informou na pergunta, que têm prioridade)
+    var gOv = role('goal'), sOv = role('saved'), rOv = role('remaining');
+    var custom = gOv != null || sOv != null || rOv != null;
+    var goalC = gOv != null ? gOv : C(tr.goal), savedC = sOv != null ? sOv : C(tr.saved);
+    var remC = rOv != null ? rOv : Math.max(0, goalC - savedC);
+    function ctxLine() {
+      if (rOv != null) return 'Faltam ' + F(remC) + ' (valor informado por você).';
+      return (custom ? 'Com os valores informados, a' : 'A') + ' meta é ' + F(goalC) + ', você já guardou ' + F(savedC) + ' e faltam ' + F(remC) + '.';
+    }
+    function noGoal() { return goalC <= 0 && rOv == null; }
+    var NOGOAL = 'Sua meta ainda está zerada, então não há o que calcular. Defina o valor na aba Meta (Editar meta e prazos) ou informe na pergunta, por exemplo: "minha meta é R$ 5.000".';
+
+    var weekCue = /semana/.test(n), monthCue = /\b(mes|mensal|mensais)\b/.test(n);
+    var mon = q.money.filter(function (x) { return x.role === 'month' || (x.role === 'plain' && !(weekCue && !monthCue)); });
+    var wk = q.money.filter(function (x) { return x.role === 'week' || (x.role === 'plain' && weekCue && !monthCue); });
+    var hz = q.dur || (q.date ? { unit: 'm', n: monthDiff(Rm, q.date) + 1, date: q.date } : null);
+    if (hz && hz.date && hz.n < 1) hz.past = true;
+    function past() { return 'A data ' + monthName(q.date) + ' já passou. Use uma data a partir de ' + monthName(Rm) + '.'; }
+
+    /* ---- em quanto tempo chego na meta guardando X por mês (ou por semana) ---- */
+    function timeFlow() {
+      if (noGoal()) return NOGOAL;
+      var vals = mon.map(function (x) { return x.c; }), wv = wk.map(function (x) { return x.c; }), usedPlan = false;
+      if (!vals.length && !wv.length) {
+        var pc = C(st.monthlyGoal);
+        if (pc > 0) { vals = [pc]; usedPlan = true; }
+        else return 'Quanto você pretende guardar por mês? Por exemplo: "Se eu guardar R$ 250 por mês, em quanto tempo atinjo a meta?"';
+      }
+      if (remC <= 0) return ctxLine() + ' A meta já foi atingida, então não há prazo a calcular.';
+      var out = [ctxLine()], res = [];
+      if (usedPlan) out.push('Você não informou um valor, então usei sua meta mensal planejada de ' + F(vals[0]) + '.');
+      vals.forEach(function (c) {
+        if (c <= 0) { out.push('Guardar ' + F(c) + ' por mês não faz a meta avançar. Informe um valor maior que zero.'); return; }
+        var k = Math.ceil(remC / c), fin = addMonths(Rm, k - 1);
+        res.push({ c: c, k: k });
+        var dl = custom ? '' : (fin > mk(st.finalDeadline) ? ', depois do prazo final (' + monthName(mk(st.finalDeadline)) + ')' : ', dentro do prazo final');
+        out.push('**' + F(c) + ' por mês**: ' + durTxt(k) + ', completando em ' + monthName(fin) + dl + '.');
+      });
+      wv.forEach(function (c) {
+        if (c <= 0) { out.push('Guardar ' + F(c) + ' por semana não faz a meta avançar. Informe um valor maior que zero.'); return; }
+        var w = Math.ceil(remC / c), mths = Math.max(1, Math.ceil(w / wpm));
+        out.push('**' + F(c) + ' por semana**: ' + plural(w, 'semana', 'semanas') + ', cerca de ' + durTxt(mths) + ' (completando por volta de ' + monthName(addMonths(Rm, mths - 1)) + ').');
+      });
+      if (res.length > 1) {
+        res.sort(function (a, b) { return a.c - b.c; });
+        var base = res[0];
+        res.slice(1).forEach(function (r) {
+          if (r.k < base.k) out.push('Com ' + F(r.c) + ' em vez de ' + F(base.c) + ' por mês você chega ' + durTxt(base.k - r.k) + ' antes.');
+          else out.push('Com ' + F(r.c) + ' o prazo é o mesmo que com ' + F(base.c) + ' por mês.');
+        });
+      }
+      if (vals.some(function (c) { return c > 0; }) || wv.some(function (c) { return c > 0; })) out.push('Cálculo com depósitos regulares todo mês, começando em ' + monthName(Rm) + ' (este mês conta como o primeiro)' + (wv.length ? ' e ' + wpmTxt + ' semanas por mês' : '') + ', sem rendimentos.');
+      return out.join('\n');
+    }
+
+    /* ---- quanto terei guardando X por mês durante N meses ---- */
+    function accumFlow() {
+      if (!hz) return 'Por quanto tempo? Diga o período, por exemplo: "Se eu guardar R$ 300 por mês durante 8 meses, quanto terei acumulado?"';
+      if (hz.past) return past();
+      var perWeek = !mon.length, x = perWeek ? wk[0].c : mon[0].c;
+      if (x <= 0) return 'O valor guardado precisa ser maior que zero.';
+      var depC, mths;
+      if (!perWeek) { mths = hz.unit === 'm' ? hz.n : hz.n / wpm; depC = Math.round(x * mths); }
+      else { depC = Math.round(x * (hz.unit === 'w' ? hz.n : hz.n * wpm)); mths = hz.unit === 'm' ? hz.n : hz.n / wpm; }
+      var label = hz.unit === 'm' ? durTxt(hz.n) : plural(hz.n, 'semana', 'semanas');
+      var range = hz.unit === 'm' ? ' (de ' + monthName(Rm) + ' a ' + monthName(addMonths(Rm, hz.n - 1)) + ')' : '';
+      var out = ['Guardando ' + F(x) + (perWeek ? ' por semana' : ' por mês') + ' durante ' + label + range + ', você acumula **' + F(depC) + '** em depósitos.'];
+      if (rOv != null) {
+        out.push(depC >= remC ? 'Isso cobre os ' + F(remC) + ' que faltam.' : 'Ainda faltariam ' + F(remC - depC) + ' dos ' + F(remC) + '.');
+      } else if (savedC > 0 || goalC > 0) {
+        var tot = depC + savedC;
+        var line = 'Somando os ' + F(savedC) + ' que você já tem guardados, o total chega a **' + F(tot) + '**';
+        if (goalC > 0) line += ', ' + (Math.round(tot / goalC * 1000) / 10).toString().replace('.', ',') + '% da meta de ' + F(goalC) + (tot >= goalC ? '. Isso cobre a meta' : '. Ainda faltariam ' + F(goalC - tot));
+        out.push(line + '.');
+      }
+      out.push('Cálculo com depósitos regulares' + ((perWeek && hz.unit === 'm') || (!perWeek && hz.unit === 'w') ? ', usando ' + wpmTxt + ' semanas por mês' : '') + ', sem rendimentos.');
+      return out.join('\n');
+    }
+
+    /* ---- quanto terei daqui a N meses (sem valor informado: usa o plano do app) ---- */
+    function accumPlan() {
+      if (hz.past) return past();
+      var months = hz.unit === 'm' ? hz.n : Math.max(1, Math.round(hz.n / wpm));
+      var tot = 0, tot2 = 0, any = false, i, M, g, pace = paceReal(S, today), sm;
+      for (i = 0; i < months; i++) {
+        M = addMonths(Rm, i); g = C(planFor(S, M).goal); sm = C(savedTripIn(S, M));
+        if (i === 0) g = Math.max(0, g - sm);
+        if (g > 0) any = true;
+        tot += g;
+        if (pace != null) tot2 += i === 0 ? Math.max(0, C(pace) - sm) : C(pace);
+      }
+      if (!any && pace == null) return 'Não há valor mensal planejado para esse período. Informe quanto pretende guardar, por exemplo: "Se eu guardar R$ 300 por mês durante ' + months + ' meses, quanto terei?"';
+      var endM = addMonths(Rm, months - 1);
+      var out = ['Hoje você tem ' + F(savedC) + ' guardados para a meta.'];
+      if (any) {
+        out.push('Se cumprir o que está planejado no app para ' + monthName(Rm) + ' a ' + monthName(endM) + ' (' + durTxt(months) + '), terá **' + F(savedC + tot) + '**.');
+        if (goalC > 0) out.push(savedC + tot >= goalC ? 'Isso alcançaria a meta de ' + F(goalC) + '.' : 'Ainda faltariam ' + F(goalC - savedC - tot) + ' para a meta de ' + F(goalC) + '.');
+      }
+      if (pace != null) out.push('No seu ritmo real de ' + F(C(pace)) + ' por mês, terá **' + F(savedC + tot2) + '**.');
+      out.push('É uma projeção, não dinheiro confirmado: supõe depósitos regulares e não considera rendimentos. Para simular outro valor, pergunte por exemplo "se eu guardar R$ 300 por mês durante ' + months + ' meses".');
+      return out.join('\n');
+    }
+
+    /* ---- quanto preciso guardar por mês/semana ---- */
+    function needFlow() {
+      var weekly = /por semana|semanal|semanais|na semana/.test(n);
+      var plain = q.money.filter(function (x) { return x.role === 'plain'; });
+      var usingOv = custom, rC = remC, out = [];
+      if (gOv == null && rOv == null && plain.length) {
+        rC = Math.max(0, plain[0].c - savedC); usingOv = true;
+        out.push('Para uma meta de ' + F(plain[0].c) + ', descontando os ' + F(savedC) + ' já guardados, faltam ' + F(rC) + '.');
+      } else {
+        if (noGoal()) return NOGOAL;
+        out.push(ctxLine());
+      }
+      if (rC <= 0) return out.join('\n') + ' A meta já foi atingida, não precisa guardar mais.';
+      if (hz && hz.past) return past();
+      var perM = null, perW = null, tl = '';
+      if (hz && hz.unit === 'w') {
+        perW = Math.ceil(rC / hz.n); perM = Math.ceil(rC / (hz.n / wpm));
+        tl = 'em ' + plural(hz.n, 'semana', 'semanas');
+      } else if (hz) {
+        perM = Math.ceil(rC / hz.n); perW = Math.ceil(rC / (hz.n * wpm));
+        tl = hz.date ? 'até ' + monthName(hz.date) + ', ou seja, ' + durTxt(hz.n) + ' contando ' + monthName(Rm) + ' como o primeiro' : 'em ' + durTxt(hz.n);
+      } else if (usingOv) {
+        if (tr.monthsToFinal < 1) return out.join('\n') + '\nO prazo final cadastrado (' + fmtDate(st.finalDeadline) + ') já passou. Informe uma data ou um prazo, por exemplo "em 10 meses".';
+        perM = Math.ceil(rC / tr.monthsToFinal); perW = Math.ceil(rC / (tr.monthsToFinal * wpm));
+        tl = 'até o prazo final do app (' + monthName(mk(st.finalDeadline)) + ', ' + durTxt(tr.monthsToFinal) + ')';
+      }
+      if (perM != null) {
+        out.push('Para chegar lá ' + tl + ', guarde **' + F(perM) + ' por mês** (cerca de **' + F(perW) + ' por semana**, com ' + wpmTxt + ' semanas por mês).');
+        out.push('Conta simples: o que falta dividido pelos meses do período, sem rendimentos.');
+        return out.join('\n');
+      }
+      // sem prazo informado: usa os prazos que já existem no app
+      if (tr.done) return 'Você já atingiu a meta. Não precisa guardar mais.';
+      if (tr.needMonth == null) { out.push('Os prazos cadastrados já passaram. Ajuste as datas em Meta > Editar meta e prazos ou informe um prazo na pergunta.'); return out.join('\n'); }
+      out.push('Para fechar no prazo (passagens até ' + fmtDate(st.ticketsDeadline) + ' e tudo até ' + fmtDate(st.finalDeadline) + '), guarde **' + brl(tr.needMonth) + ' por mês**, cerca de **' + brl(tr.needWeek) + ' por semana** (' + wpmTxt + ' semanas por mês).');
+      if (tr.ticketsRem > 0 && tr.needTickets != null) out.push('Só para as passagens (' + brl(tr.ticketsRem) + ' até ' + monthName(mk(st.ticketsDeadline)) + ') o ritmo seria ' + brl(tr.needTickets) + ' por mês.');
+      out.push(tr.needMonth > Number(st.monthlyGoal) + 0.005 ? 'Isso é mais que os ' + brl(st.monthlyGoal) + ' que você planejou guardar por mês.' : 'Sua meta mensal de ' + brl(st.monthlyGoal) + ' já cobre isso.');
+      return out.join('\n');
+    }
+
+    function projectionFlow(suggest) {
+      if (tr.goal <= 0) return NOGOAL;
+      if (tr.done) return 'Você já atingiu a meta: guardou ' + brl(tr.saved) + ' de ' + brl(tr.goal) + '.';
+      var pj = projection(S, today), s;
+      if (pj.month) {
+        var late = pj.month > mk(st.finalDeadline);
+        s = (pj.basis === 'real' ? 'No seu ritmo real de ' + brl(pj.rate) + ' por mês' : 'Guardando a meta mensal planejada de ' + brl(pj.rate) + ' por mês') + ', a meta fecha em ' + monthName(pj.month) + (late ? ', depois do prazo final (' + monthName(mk(st.finalDeadline)) + ').' : ', dentro do prazo final.');
+      } else s = 'Nesse ritmo (' + brl(pj.rate) + ' por mês) a meta não fecha.';
+      if (pj.basis === 'plan') s += ' Ainda não há meses completos de registro; depois do primeiro mês a previsão passa a usar o que você realmente guardou.';
+      if (suggest) s += '\nPara simular outro valor, pergunte por exemplo: "Se eu guardar R$ 300 por mês, em quanto tempo atinjo a meta?"';
+      return s;
+    }
+
+    function monthFlow() {
+      var ms = monthStats(S, Rm, today);
+      if (ms.planned === 0 && ms.received === 0 && ms.savedAll === 0) return 'Ainda não há despesas, recebimentos ou economias registrados para ' + monthName(Rm) + '.';
+      var out = ['Resumo de ' + monthName(Rm) + ':',
+        '• Salário recebido: ' + brl(ms.received) + (ms.plannedSalary > 0 ? ' (previsto ' + brl(ms.plannedSalary) + ')' : ''),
+        '• Despesas previstas: ' + brl(ms.planned) + ' (pagas ' + brl(ms.paid) + ', a pagar ' + brl(ms.pending) + ')',
+        '• Guardado no mês: ' + brl(ms.savedAll),
+        '• Saldo disponível (recebido − pago − guardado): ' + brl(ms.available)];
+      if (ms.goal > 0 && ms.incomeRef > 0) out.push(ms.free >= 0 ? 'Depois das despesas previstas e da meta de guardar, ficam livres ' + brl(ms.free) + '.' : 'As despesas previstas e a meta de guardar passam do salário em ' + brl(-ms.free) + '.');
+      return out.join('\n');
+    }
+
+    // ---- reconhecimento da pergunta ----
+    var help = (/^(oi|ola|e ai|opa|bom dia|boa tarde|boa noite)\b/.test(n) && n.length < 30) || /\b(ajuda|ajudar|help|exemplos?)\b|o que (voce )?(faz|pode|sabe)|como (funciona|usar)/.test(n);
+    if (help) return ASK_HELP;
+    var asksNeed = /quanto (eu )?(ainda )?(preciso|devo|tenho que|precisaria|deveria|precisarei)( ainda)? (guardar|economizar|poupar|juntar|depositar|reservar|separar)|qual (o )?valor (mensal|semanal|por mes|por semana)|valor (mensal|semanal) (devo|preciso)|quanto guardar|quanto economizar por|quanto poupar/.test(n);
+    var asksAccum = /quanto (eu )?(terei|vou ter|teria|tera|acumularei|economizarei|juntarei|vou acumular|vou juntar|vou economizar|fico com|fica)|(acumulado|economizado|guardado|juntado) (daqui|em|apos|depois|ate|no fim|ao fim)|total acumulado|quanto da\b|quanto dara/.test(n);
+    var asksTime = /(em )?quanto tempo|quantos meses|quantas semanas|quantos anos|quando (eu )?(consigo|atingo|chego|vou (atingir|chegar|conseguir)|termino|completo)|prazo|em que mes|quanto demora|quanto leva/.test(n);
+
+    if (asksNeed) return needFlow();
+    if (asksAccum) return (mon.length || wk.length) ? accumFlow() : (hz ? accumPlan() : 'Quanto você quer guardar por mês e por quanto tempo? Por exemplo: "Se eu guardar R$ 300 por mês durante 8 meses, quanto terei acumulado?"');
+    if (asksTime) return (mon.length || wk.length || custom) ? timeFlow() : projectionFlow(true);
+
+    if (/porcent|percent|por cento|progresso|que parte da meta|como (esta|anda) (minha|a) meta|quanto (da|do) (minha |meu )?(meta|objetivo).*(alcanc|conclu|cheg|atingi|completei|juntei|guardei)/.test(n)) {
+      if (noGoal() || goalC <= 0) return NOGOAL;
+      var pc = Math.round(savedC / goalC * 1000) / 10;
+      return 'Você já alcançou **' + String(pc).replace('.', ',') + '%** da meta (' + F(savedC) + ' de ' + F(goalC) + ').' + (custom ? '' : (tr.done ? ' A meta foi atingida!' : ' Faltam ' + F(remC) + '.'));
+    }
+    if (/quanto (ainda )?falta|falta quanto|faltam quanto|o que falta|quanto me falta/.test(n)) {
+      if (noGoal()) return NOGOAL;
+      if (remC <= 0) return ctxLine() + ' A meta já foi atingida!';
+      var o2 = [ctxLine()];
+      if (!custom && tr.ticketsRem > 0) o2.push('Desse total, ' + brl(tr.ticketsRem) + ' é para as passagens (até ' + fmtDate(st.ticketsDeadline) + ').');
+      return o2.join('\n');
+    }
+    if (/quanto (eu )?(ja )?(guardei|tenho|economizei|juntei|acumulei)|meu saldo|total guardado|dinheiro guardado/.test(n)) {
+      var rs = C(sum(S.savings.filter(function (x) { return x.dest === 'reserva'; }), function (x) { return x.amount; }));
+      var o3 = ['Você já guardou **' + brl(tr.saved) + '** para a meta.'];
+      if (tr.spent > 0) o3.push('Já foram gastos ' + brl(tr.spent) + ' da viagem, então ainda estão em mãos ' + brl(tr.inFund) + '.');
+      if (rs > 0) o3.push('Na reserva geral há mais ' + F(rs) + ' (não conta para a meta).');
+      return o3.join('\n');
+    }
+    if (/(qual|quanto|valor).*(minha meta|valor da meta|meta total|objetivo)|^minha meta|meta (da|de) viagem/.test(n)) {
+      if (tr.goal <= 0) return NOGOAL;
+      return 'Sua meta é **' + brl(tr.goal) + '**: passagens ' + brl(st.ticketsGoal) + ' + gastos na viagem ' + brl(st.spendGoal) + '.\nPrazos: passagens até ' + fmtDate(st.ticketsDeadline) + ' e todo o dinheiro até ' + fmtDate(st.finalDeadline) + '. Meta mensal de economia: ' + brl(st.monthlyGoal) + '.\nPara mudar o valor, use Meta > Editar meta e prazos.';
+    }
+    if (/despesa|gasto|gastei|sobra|sobrando|disponivel|salario|posso gastar|dinheiro livre|orcamento/.test(n)) return monthFlow();
+    if (/ritmo|projec|previs|vou conseguir|vou atingir|no caminho|estou indo|consigo atingir|vou (chegar|alcancar)/.test(n)) return projectionFlow(false);
+
+    if (mon.length || wk.length) return hz ? accumFlow() : timeFlow();
+    return 'Não entendi essa pergunta. Tente algo como "quanto falta para minha meta?", "se eu guardar R$ 250 por mês, em quanto tempo atinjo a meta?" ou "quanto preciso guardar por mês até dezembro de 2027?". Digite "ajuda" para ver mais exemplos.';
+  }
+
+  var api = {
+    FUND_CAT: FUND_CAT, DEFAULT_CATS: DEFAULT_CATS, MN: MN, MS: MS,
+    r2: r2, sum: sum, todayStr: todayStr, mk: mk, addMonths: addMonths, monthDiff: monthDiff, monthRange: monthRange,
+    daysBetween: daysBetween, uid: uid, brl: brl, brlShort: brlShort, monthName: monthName, monthLbl: monthLbl,
+    monthOnly: monthOnly, fmtDate: fmtDate, parseBR: parseBR, toInput: toInput,
+    defaultState: defaultState, migrate: migrate,
+    transportDaily: transportDaily, transportMonthly: transportMonthly, recAmount: recAmount,
+    monthItems: monthItems, planFor: planFor, monthStats: monthStats, catTotals: catTotals,
+    refMonth: refMonth, tripStats: tripStats, paceReal: paceReal, projection: projection, simulate: simulate,
+    monthList: monthList, planMonths: planMonths, chartSeries: chartSeries, alerts: alerts,
+    upsert: upsert, removeById: removeById, togglePaid: togglePaid,
+    ask: ask, parseQuestion: parseQuestion, planMonthsFor: planMonthsFor
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  root.RC = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+/* Rumo ao Chile - telas, eventos e armazenamento */
+(function () {
+  'use strict';
+  var R = window.RC;
+  var KEY = 'rumo-ao-chile:v1';
+  var brl = R.brl;
+  function $(s) { return document.querySelector(s); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function today() { return R.todayStr(); }
+
+  /* ================= armazenamento ================= */
+  var state;
+  try { var raw = localStorage.getItem(KEY); state = raw ? R.migrate(JSON.parse(raw)) : R.defaultState(); }
+  catch (e) { state = R.defaultState(); }
+
+  var sync = 'checking', ref = null, pushing = false, pushAgain = false, ptimer = null;
+  function syncText() {
+    return {
+      checking: 'Conectando à sua conta…',
+      cloud: 'Dados salvos na sua conta (e uma cópia neste aparelho)',
+      saving: 'Salvando…',
+      local: 'Dados salvos só neste aparelho',
+      error: 'Sem conexão com a conta agora. Seus dados estão salvos neste aparelho.',
+      'rt-connecting': 'Conectando à sincronização…',
+      'rt-saving': 'Sincronizando…',
+      'rt-live': 'Sincronizado com os outros aparelhos',
+      'rt-offline': 'Sem conexão. Salvo neste aparelho e sincroniza quando a internet voltar.',
+      'rt-denied': 'O banco de dados recusou o acesso. Confira as regras no Firebase.'
+    }[sync];
+  }
+  function setSync(s) {
+    sync = s;
+    document.querySelectorAll('.js-sync').forEach(function (el) {
+      el.className = 'syncline js-sync ' + sync;
+      el.querySelector('span').textContent = syncText();
+    });
+  }
+  function save() {
+    state.updated = Date.now();
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* sem armazenamento local */ }
+    schedulePush();
+    if (rt) { setSync('rt-saving'); rtSchedule(400); }
+  }
+  function schedulePush() {
+    if (!ref) return;
+    setSync('saving');
+    clearTimeout(ptimer);
+    ptimer = setTimeout(doPush, 700);
+  }
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function doPush() {
+    if (!ref) return Promise.resolve();
+    if (pushing) { pushAgain = true; return Promise.resolve(); }
+    pushing = true;
+    var body = { json: JSON.stringify(state), updated: state.updated };
+    return ref.set(body).catch(function (e) {
+      if (e && e.code === 'unavailable') return sleep(900 + Math.random() * 600).then(function () { return ref.set(body); });
+      throw e;
+    }).then(function () { setSync('cloud'); }, function () { setSync('error'); }).then(function () {
+      pushing = false;
+      if (pushAgain) { pushAgain = false; return doPush(); }
+    });
+  }
+  function initCloud() {
+    if (!window.claude || typeof window.claude.use !== 'function') { setSync('local'); return; }
+    Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (r) {
+      var db = r[0], user = r[1];
+      if (!db || !user) { setSync('local'); return null; }
+      return user.id().then(function (uid) {
+        if (!uid) { setSync('local'); return null; }
+        ref = db.doc('data/users/' + uid + '/finance');
+        return ref.get().then(function (snap) {
+          var remote = null;
+          if (snap.exists) {
+            var d = snap.data() || {};
+            try { remote = R.migrate(JSON.parse(d.json)); remote.updated = Number(d.updated) || remote.updated; } catch (e) { remote = null; }
+          }
+          if (remote && remote.updated > state.updated) {
+            state = remote;
+            try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ok */ }
+            fixMonth(); renderAll(); setSync('cloud');
+          } else if (state.updated > 0 && (!remote || state.updated > remote.updated)) {
+            setSync('saving'); return doPush();
+          } else setSync('cloud');
+        });
+      });
+    }).catch(function () { ref = null; setSync('local'); });
+  }
+
+  /* ================= estado da tela ================= */
+  var ui = { tab: 'home', month: null, filter: 'todas', sheet: null, alertsAll: false, chartSel: null, planExtra: 0, pickYear: null, chat: [], draft: '' };
+  function initialMonth() {
+    var list = R.monthList(state), cur = R.mk(today());
+    var m = cur < state.settings.startMonth ? state.settings.startMonth : cur;
+    if (list.indexOf(m) < 0) m = m > list[list.length - 1] ? list[list.length - 1] : list[0];
+    return m;
+  }
+  function fixMonth() { var l = R.monthList(state); if (!/^\d{4}-\d{2}$/.test(ui.month || '') || ui.month < l[0]) ui.month = initialMonth(); }
+  ui.month = initialMonth();
+
+  /* ================= ícones ================= */
+  var IC = {
+    home: '<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+    list: '<path d="M4 6h16M4 12h16M4 18h10"/>',
+    peak: '<path d="M3 19l6-11 4 7 3-4 5 8z"/>',
+    chart: '<path d="M5 20v-9M12 20V4M19 20v-6"/>',
+    sliders: '<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',
+    plus: '<path d="M12 5v14M5 12h14"/>',
+    left: '<path d="M15 6l-6 6 6 6"/>', right: '<path d="M9 6l6 6-6 6"/>',
+    check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>',
+    chat: '<path d="M4 5h16v11H9l-5 4z"/>',
+    alert: '<path d="M12 7v6M12 17v.5"/>', info: '<path d="M12 11v6M12 7v.5"/>'
+  };
+  function svg(n, s) { s = s || 24; return '<svg viewBox="0 0 24 24" width="' + s + '" height="' + s + '" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + IC[n] + '</svg>'; }
+  var GICON = {
+    viagem: '<rect width="30" height="30" fill="#8FD3F4"/><circle cx="22" cy="8" r="3.5" fill="#FFD166"/><rect y="20" width="30" height="10" fill="#1B9AAA"/><path d="M4 22q9-7 20 0z" fill="#F2D6A2"/><path d="M13 20.5l1-9" stroke="#8B5A2B" stroke-width="1.4" stroke-linecap="round"/><path d="M14 11.5q-4-3-7-1M14 11.5q-1-4-5-4.5M14 11.5q3-4 7-3M14 11.5q4-1 6 2" stroke="#2E9E5B" stroke-width="1.6" fill="none" stroke-linecap="round"/>',
+    carro: '<rect width="30" height="30" fill="#DCE9F7"/><rect y="22" width="30" height="8" fill="#44546A"/><rect x="3" y="14.5" width="24" height="6" rx="2" fill="#D64545"/><path d="M8 14.5l3-4.5h8l3.5 4.5z" fill="#D64545"/><path d="M10.2 14l2-3h2.3v3zM16 14v-3h2.8l2.2 3z" fill="#CFE8FF"/><circle cx="9" cy="21" r="2.6" fill="#0E1A2B"/><circle cx="21" cy="21" r="2.6" fill="#0E1A2B"/><circle cx="9" cy="21" r="1" fill="#9AA7B8"/><circle cx="21" cy="21" r="1" fill="#9AA7B8"/>',
+    casa: '<rect width="30" height="30" fill="#CDE8D2"/><rect y="23" width="30" height="7" fill="#5BAF6E"/><rect x="7" y="13" width="16" height="11" fill="#F4E3C1"/><path d="M4.5 14l10.5-8.5L25.5 14z" fill="#C0392B"/><rect x="13" y="17.5" width="4" height="6.5" rx=".6" fill="#8B5A2B"/><rect x="9" y="15.5" width="3" height="3" fill="#8FD3F4"/><rect x="18.5" y="15.5" width="3" height="3" fill="#8FD3F4"/>',
+    estudos: '<rect width="30" height="30" fill="#FFE3A3"/><path d="M15 7l11 5-11 5-11-5z" fill="#14558F"/><path d="M9 15v5q6 3.5 12 0v-5l-6 2.7z" fill="#2A78D6"/><path d="M26 12v7" stroke="#14558F" stroke-width="1.2" stroke-linecap="round"/><circle cx="26" cy="20" r="1.3" fill="#EB6834"/>',
+    outro: '<rect width="30" height="30" fill="#14558F"/><circle cx="15" cy="15" r="9" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="15" cy="15" r="5" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="15" cy="15" r="1.8" fill="#FFD166"/>'
+  };
+  function gtype() { var t = state.settings.goalType; return GICON[t] ? t : 'outro'; }
+  function flag(w) {
+    return '<svg viewBox="0 0 30 30" width="' + w + '" height="' + w + '" role="img" aria-label="Imagem da meta"><clipPath id="gclip"><rect width="30" height="30" rx="7"/></clipPath><g clip-path="url(#gclip)">' + GICON[gtype()] + '</g></svg>';
+  }
+  function gname() { return String(state.settings.goalName || '').trim() || 'Minha meta'; }
+  function alertIcon(kind) { return kind === 'good' || kind === 'ok' ? 'check' : (kind === 'info' ? 'info' : 'alert'); }
+
+  /* ================= cabeçalho e navegação ================= */
+  var TABS = [['home', 'Início', 'home'], ['desp', 'Despesas', 'list'], ['chile', 'Meta', 'peak'], ['plan', 'Plano', 'chart'], ['ia', 'Assistente', 'chat'], ['more', 'Mais', 'sliders']];
+  function renderTop() {
+    var list = R.monthList(state);
+    var showM = ui.tab === 'home' || ui.tab === 'desp' || ui.tab === 'plan';
+    $('#top').innerHTML = '<div class="wrap gut top-inner"><div class="brand">' + flag(28) + '<span>Rumo aos Meus Sonhos</span></div>' +
+      (showM ? '<div class="stepper"><button data-act="prevM" aria-label="Mês anterior"' + (ui.month <= list[0] ? ' disabled' : '') + '>' + svg('left', 20) + '</button>' +
+        '<button class="mlabel" data-act="pickM" aria-label="Escolher mês">' + R.monthLbl(ui.month) + '</button>' +
+        '<button data-act="nextM" aria-label="Próximo mês">' + svg('right', 20) + '</button></div>' : '') + '</div>';
+  }
+  function renderNav() {
+    $('#nav').innerHTML = '<div class="wrap gut in">' + TABS.map(function (t) {
+      return '<button data-act="tab" data-tab="' + t[0] + '"' + (ui.tab === t[0] ? ' aria-current="page"' : '') + '>' + svg(t[2], 24) + '<span>' + t[1] + '</span></button>';
+    }).join('') + '</div>';
+    $('#fab').hidden = ui.tab === 'ia';
+  }
+  function renderAll() { renderTop(); renderView(); renderNav(); if (ui.sheet) renderSheet(); if (tour) tourPlace(); }
+  function renderView() {
+    var v = { home: viewHome, desp: viewDesp, chile: viewChile, plan: viewPlan, ia: viewIA, more: viewMore }[ui.tab]();
+    $('#view').innerHTML = v;
+  }
+  function toast(msg) {
+    var t = $('#toast'); t.textContent = msg; t.classList.add('on');
+    clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove('on'); }, 2600);
+  }
+
+  /* ================= peças reutilizáveis ================= */
+  function pill(kind, text) { return '<span class="pill ' + kind + '">' + (kind === 'neutral' ? '' : svg(alertIcon(kind), 13)) + esc(text) + '</span>'; }
+  function syncLine() { return '<div class="syncline js-sync ' + sync + '"><i></i><span>' + esc(syncText()) + '</span></div>'; }
+  function neg(n) { return n < -0.004 ? ' neg' : ''; }
+  function defaultDateIn(M) { return R.mk(today()) === M ? today() : M + '-01'; }
+
+  /* ================= INÍCIO ================= */
+  function heroCard(tr) {
+    var s = state.settings;
+    return '<button class="card lift hero" data-act="goChile" aria-label="Abrir minha meta">' +
+      '<div class="hero-top"><b>' + flag(24) + esc(gname()) + '</b><span>' + esc(R.monthName(R.mk(s.finalDeadline))) + '</span></div>' +
+      '<div class="big">' + brl(tr.saved) + '<span class="of">de ' + brl(tr.goal) + '</span></div>' +
+      '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + Math.round(tr.pct) + '"><i style="width:' + tr.pct.toFixed(1) + '%"></i><b class="tick" style="left:calc(' + tr.ticketsMark.toFixed(1) + '% - 1px)"></b></div>' +
+      '<div class="bar-foot"><span>' + Math.floor(tr.pct) + '% da meta</span><span>' + (tr.done ? 'meta atingida' : 'faltam ' + brl(tr.remaining)) + '</span></div></button>';
+  }
+
+  function viewHome() {
+    var M = ui.month, td = today(), st = R.monthStats(state, M, td), tr = R.tripStats(state, td), only = R.monthOnly(M);
+    var h = heroCard(tr);
+
+    h += '<section class="card"><h2>Caixa de ' + only + '</h2>' +
+      '<div class="row"><div class="l">Salário recebido' + (st.plannedSalary > 0 ? '<small>previsto ' + brl(st.plannedSalary) + '</small>' : '') + '</div><div class="v">' + brl(st.received) + '</div></div>' +
+      '<div class="row"><div class="l">Despesas pagas<small>de ' + brl(st.planned) + ' previstas no mês</small></div><div class="v">' + brl(st.paid) + '</div></div>' +
+      '<div class="row"><div class="l">Economizado no mês<small>' + brl(st.savedTrip) + ' para a meta' + (st.savedReserve > 0 ? ' · ' + brl(st.savedReserve) + ' na reserva' : '') + '</small></div><div class="v">' + brl(st.savedAll) + '</div></div>' +
+      '<div class="row total"><div class="l">Saldo disponível<small>recebido − pago − guardado</small></div><div class="v' + neg(st.available) + '">' + brl(st.available) + '</div></div>' +
+      '<div class="btn-row" style="margin-top:12px"><button class="btn sm" data-act="newIncome">' + svg('plus', 18) + 'Recebi</button><button class="btn sm" data-act="newSaving">' + svg('plus', 18) + 'Guardei</button></div></section>';
+
+    if (st.incomeRef > 0 || st.planned > 0) {
+      var goalUse = Math.max(st.goal, st.savedAll);
+      var scale = Math.max(st.incomeRef, st.planned + goalUse) || 1;
+      var free = Math.max(0, st.free);
+      h += '<section class="card"><h2>Seu salário em ' + only + '</h2>' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="sub">Base: ' + brl(st.incomeRef) + '</span>' +
+        (st.goal > 0 ? (st.feasible ? pill('good', 'Meta de guardar é possível') : pill('bad', 'Meta maior que o disponível')) : '') + '</div>' +
+        '<div class="alloc" role="img" aria-label="Divisão do salário entre despesas, meta de guardar e valor livre">' +
+        (st.planned > 0 ? '<i style="flex:' + st.planned + ' 1 0;background:var(--s2)"></i>' : '') +
+        (goalUse > 0 ? '<i style="flex:' + goalUse + ' 1 0;background:var(--s3)"></i>' : '') +
+        (free > 0 ? '<i style="flex:' + free + ' 1 0;background:var(--s1)"></i>' : '') +
+        (st.planned + goalUse > st.incomeRef + 0.005 ? '<b class="mk" style="left:' + (st.incomeRef / scale * 100).toFixed(1) + '%"></b>' : '') + '</div>' +
+        '<div class="legend">' +
+        '<div><span class="sw" style="background:var(--s2)"></span>Despesas do mês<span class="lv">' + brl(st.planned) + '</span></div>' +
+        '<div><span class="sw" style="background:var(--s3)"></span>Meta de guardar<span class="lv">' + brl(goalUse) + '</span></div>' +
+        '<div><span class="sw" style="background:var(--s1)"></span>' + (st.free < 0 ? 'Falta para a meta' : 'Livre para gastar') + '<span class="lv' + neg(st.free) + '">' + brl(Math.abs(st.free)) + '</span></div></div>' +
+        '<p class="hint" style="margin:10px 0 0">' + (st.free >= 0 ? 'Você pode gastar até ' + brl(st.free) + ' além das despesas previstas sem comprometer a meta.' : 'As despesas previstas e a meta passam do salário em ' + brl(-st.free) + '.') +
+        (st.estimates > 0 ? ' Inclui ' + brl(st.estimates) + ' em estimativas.' : '') + '</p></section>';
+    }
+
+    var al = R.alerts(state, M, td), shown = ui.alertsAll ? al : al.slice(0, 4);
+    h += '<section class="card"><h2>Avisos</h2><div class="alerts">' + shown.map(function (a) {
+      return '<div class="alert ' + a.kind + '"><span class="ic">' + svg(alertIcon(a.kind), 13) + '</span><span>' + esc(a.text) + '</span></div>';
+    }).join('') + '</div>' + (al.length > 4 ? '<button class="link" data-act="alertsAll">' + (ui.alertsAll ? 'Mostrar menos' : 'Ver todos (' + al.length + ')') + '</button>' : '') + '</section>';
+
+    var mv = state.incomes.filter(function (x) { return R.mk(x.date) === M; }).map(function (x) { return { k: 'in', id: x.id, date: x.date, amount: x.amount, title: x.desc || 'Recebimento' }; })
+      .concat(state.savings.filter(function (x) { return R.mk(x.date) === M; }).map(function (x) { return { k: 'sv', id: x.id, date: x.date, amount: x.amount, title: x.dest === 'reserva' ? 'Guardado na reserva' : 'Guardado para a meta' }; }))
+      .sort(function (a, b) { return b.date < a.date ? -1 : b.date > a.date ? 1 : 0; });
+    h += '<section class="card"><h2>Recebimentos e economias</h2>' + (mv.length ? '<div class="list">' + mv.map(function (x) {
+      return '<button class="item" data-act="editMv" data-k="' + x.k + '" data-id="' + esc(x.id) + '"><span class="body"><div class="t">' + esc(x.title) + '</div><div class="m">' + R.fmtDate(x.date) + '</div></span><span class="amt' + (x.k === 'in' ? ' in' : '') + '">' + (x.k === 'in' ? '+ ' : '→ ') + brl(x.amount) + '</span></button>';
+    }).join('') + '</div>' : '<div class="empty">Nada registrado em ' + esc(R.monthName(M)) + '. Use “Recebi” quando o salário cair e “Guardei” quando separar dinheiro.</div>') + '</section>';
+
+    return h + syncLine();
+  }
+
+  /* ================= DESPESAS ================= */
+  function itemRow(i) {
+    var paid = i.status === 'paga';
+    return '<div class="item' + (paid ? ' paid' : '') + '"><button class="check' + (paid ? ' on' : '') + '" data-act="togglePay" data-id="' + esc(i.id) + '" aria-label="' + (paid ? 'Marcar como pendente' : 'Marcar como paga') + '" aria-pressed="' + paid + '">' + svg('check', 18) + '</button>' +
+      '<button class="itembtn" data-act="editItem" data-id="' + esc(i.id) + '"><span class="body"><div class="t">' + esc(i.name) + '</div><div class="m"><span>' + esc(i.cat) + '</span><span>· ' + (i.type === 'fixa' ? 'Fixa' : 'Variável') + '</span><span>· ' + (i.virtual ? 'prevista' : R.fmtDate(i.date)) + '</span>' +
+      (i.confirmed ? '' : '<span class="tag">Estimativa</span>') + (i.cat === R.FUND_CAT ? '<span class="tag info">Sai do fundo da viagem</span>' : '') + '</div></span>' +
+      '<span class="amt">' + brl(i.amount) + '</span></button></div>';
+  }
+  function viewDesp() {
+    var M = ui.month, st = R.monthStats(state, M, today()), items = st.items;
+    var shown = items.filter(function (i) { return ui.filter === 'todas' || (ui.filter === 'pendente' ? i.status !== 'paga' : i.status === 'paga'); })
+      .sort(function (a, b) {
+        var pa = a.status === 'paga' ? 1 : 0, pb = b.status === 'paga' ? 1 : 0;
+        if (pa !== pb) return pa - pb;
+        if (a.virtual !== b.virtual) return a.virtual ? -1 : 1;
+        return pa ? (a.date < b.date ? 1 : -1) : (a.date > b.date ? 1 : -1);
+      });
+    var h = '<section class="card"><h2>Despesas de ' + R.monthOnly(M) + '</h2><div class="stats3">' +
+      '<div><span>Previstas</span><b>' + brl(st.planned) + '</b></div><div><span>Pagas</span><b>' + brl(st.paid) + '</b></div><div><span>A pagar</span><b>' + brl(st.pending) + '</b></div></div>' +
+      (st.estimates > 0 ? '<p class="hint" style="margin:10px 0 0">' + brl(st.estimates) + ' ainda são estimativas.</p>' : '') + '</section>';
+
+    var cats = R.catTotals(state, M), mx = cats.length ? cats[0].total : 1;
+    if (cats.length) h += '<section class="card"><h2>Por categoria</h2><div class="cats">' + cats.map(function (c) {
+      return '<div class="cat"><div class="top"><span>' + esc(c.cat) + '</span><b>' + brl(c.total) + '</b></div><div class="trk"><i style="width:' + (c.total / mx * 100).toFixed(1) + '%"></i></div></div>';
+    }).join('') + '</div></section>';
+
+    h += '<div class="seg" role="group" aria-label="Filtrar despesas">' + [['todas', 'Todas'], ['pendente', 'A pagar'], ['paga', 'Pagas']].map(function (f) {
+      return '<button data-act="filter" data-v="' + f[0] + '" aria-pressed="' + (ui.filter === f[0]) + '">' + f[1] + '</button>';
+    }).join('') + '</div>';
+
+    h += '<section class="card">' + (shown.length ? '<div class="list">' + shown.map(itemRow).join('') + '</div>' :
+      '<div class="empty">' + (items.length ? 'Nenhuma despesa neste filtro.' : 'Nenhuma despesa em ' + esc(R.monthName(M)) + '.') + '</div>') + '</section>' +
+      '<button class="btn primary block" data-act="newExpense">' + svg('plus', 20) + 'Nova despesa</button>';
+    return h;
+  }
+
+  /* ================= VIAGEM ================= */
+  function viewChile() {
+    var td = today(), tr = R.tripStats(state, td), pj = R.projection(state, td), s = state.settings;
+    var h = '<section class="card lift"><div class="hero-top"><b>' + flag(26) + esc(gname()) + '</b></div>' +
+      '<p class="sub" style="margin:4px 0 0">Meta até ' + esc(R.monthName(R.mk(s.finalDeadline))) + '</p>' +
+      '<div class="big">' + brl(tr.saved) + '<span class="of">de ' + brl(tr.goal) + '</span></div>' +
+      '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + Math.round(tr.pct) + '"><i style="width:' + tr.pct.toFixed(1) + '%"></i><b class="tick" style="left:calc(' + tr.ticketsMark.toFixed(1) + '% - 1px)"></b></div>' +
+      '<div class="bar-foot"><span><b>' + Math.floor(tr.pct) + '%</b> concluído</span><span>' + (tr.done ? 'meta atingida' : 'faltam ' + brl(tr.remaining)) + '</span></div>' +
+      '<p class="tick-label" style="margin:8px 0 0">Traço na barra: valor das passagens (' + brl(s.ticketsGoal) + ')</p></section>';
+
+    var needTxt = tr.needMonth == null ? '—' : brl(tr.needMonth);
+    var mStatus = '';
+    if (!tr.done && tr.needMonth != null) mStatus = tr.needMonth > Number(s.monthlyGoal) + 0.005 ? pill('warn', 'Sua meta mensal está abaixo do necessário') : pill('good', 'Sua meta mensal cobre o necessário');
+    h += '<section class="card"><h2>Quanto guardar</h2>' + (mStatus ? '<div style="margin-bottom:6px">' + mStatus + '</div>' : '') +
+      '<div class="row"><div class="l">Valor total da meta<small>passagens ' + brl(s.ticketsGoal) + ' + gastos na viagem ' + brl(s.spendGoal) + '</small></div><div class="v">' + brl(tr.goal) + '</div></div>' +
+      '<div class="row"><div class="l">Já economizado</div><div class="v">' + brl(tr.saved) + '</div></div>' +
+      '<div class="row"><div class="l">Quanto falta</div><div class="v">' + brl(tr.remaining) + '</div></div>' +
+      '<div class="row"><div class="l">Meta mensal de economia<small>definida por você</small></div><div class="v">' + brl(s.monthlyGoal) + '</div></div>' +
+      (tr.done ? '' : '<div class="row"><div class="l">Preciso guardar por mês<small>para fechar no prazo</small></div><div class="v">' + needTxt + '</div></div>' +
+        '<div class="row"><div class="l">Preciso guardar por semana<small>com ' + String(s.weeks).replace('.', ',') + ' semanas por mês</small></div><div class="v">' + (tr.needWeek == null ? '—' : brl(tr.needWeek)) + '</div></div>') + '</section>';
+
+    function daysTxt(n) { return n < 0 ? 'prazo vencido' : (n === 0 ? 'hoje' : n + (n === 1 ? ' dia' : ' dias')); }
+    h += '<section class="card"><h2>Prazos</h2>' +
+      '<div class="row"><div class="l">Comprar as passagens até<small>' + (tr.ticketsDone ? 'valor das passagens já guardado' : (tr.ticketsOverdue ? 'prazo vencido · faltam ' + brl(tr.ticketsRem) : 'faltam ' + brl(tr.ticketsRem) + (tr.needTickets != null ? ' · ' + brl(tr.needTickets) + ' por mês' : ''))) + '</small></div><div class="v">' + R.fmtDate(s.ticketsDeadline) + '</div></div>' +
+      '<div class="row"><div class="l">Juntar todo o dinheiro até<small>' + daysTxt(tr.daysToFinal) + '</small></div><div class="v">' + R.fmtDate(s.finalDeadline) + '</div></div></section>';
+
+    var pt = '';
+    if (tr.done) pt = 'Meta atingida. Parabéns!';
+    else if (pj.month) {
+      var late = pj.month > R.mk(s.finalDeadline);
+      pt = (pj.basis === 'real' ? 'No seu ritmo real de ' + brl(pj.rate) + ' por mês' : 'Guardando a meta de ' + brl(pj.rate) + ' por mês') + ', o dinheiro fecha em ' + R.monthName(pj.month) + (late ? ' (depois do prazo final).' : '.');
+    } else pt = pj.basis === 'real' ? 'No ritmo real de ' + brl(pj.rate) + ' por mês a meta não fecha.' : 'Com a meta mensal atual a meta da viagem não fecha.';
+    h += '<section class="card"><h2>Previsão</h2><p style="margin:0">' + esc(pt) + '</p>' + (pj.basis === 'plan' && !tr.done ? '<p class="hint" style="margin:8px 0 0">Ainda não há meses completos de registro. Depois do primeiro mês, a previsão passa a usar quanto você realmente guardou.</p>' : '') + '</section>';
+
+    h += '<section class="card"><h2>Dinheiro da meta</h2>' +
+      '<div class="row"><div class="l">Guardado para a meta</div><div class="v">' + brl(tr.saved) + '</div></div>' +
+      '<div class="row"><div class="l">Já gasto da meta<small>despesas na categoria “' + R.FUND_CAT + '”</small></div><div class="v">' + brl(tr.spent) + '</div></div>' +
+      '<div class="row total"><div class="l">Ainda em mãos para a meta</div><div class="v' + neg(tr.inFund) + '">' + brl(tr.inFund) + '</div></div>' +
+      '<p class="hint" style="margin:8px 0 0">Despesas dessa categoria saem do dinheiro guardado, não do salário do mês.</p></section>';
+
+    h += '<div class="btn-row"><button class="btn primary" data-act="newSaving">' + svg('plus', 18) + 'Guardei dinheiro</button><button class="btn ghost" data-act="editGoalTotal">Editar valor da meta</button><button class="btn ghost" data-act="editGoal">Editar meta e prazos</button></div>';
+
+    var dep = state.savings.filter(function (x) { return x.dest !== 'reserva'; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    h += '<section class="card"><h2>Depósitos para a meta</h2>' + (dep.length ? '<div class="list">' + dep.map(function (x) {
+      return '<button class="item" data-act="editMv" data-k="sv" data-id="' + esc(x.id) + '"><span class="body"><div class="t">' + esc(x.desc || 'Guardado para a meta') + '</div><div class="m">' + R.fmtDate(x.date) + '</div></span><span class="amt">' + brl(x.amount) + '</span></button>';
+    }).join('') + '</div>' : '<div class="empty">Nenhum depósito ainda. Quando separar dinheiro para a meta, toque em “Guardei dinheiro”.</div>') + '</section>';
+    return h;
+  }
+
+  /* ================= PLANO ================= */
+  function niceCeil(v) {
+    if (v <= 0) return 100;
+    var p = Math.pow(10, Math.floor(Math.log10(v))), f = v / p;
+    return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p;
+  }
+  function topRoundedBar(x, y, w, h, r) {
+    if (h < 1) return '';
+    r = Math.min(r, h, w / 2);
+    return 'M' + x + ',' + (y + h) + 'L' + x + ',' + (y + r) + 'Q' + x + ',' + y + ' ' + (x + r) + ',' + y + 'L' + (x + w - r) + ',' + y + 'Q' + (x + w) + ',' + y + ' ' + (x + w) + ',' + (y + r) + 'L' + (x + w) + ',' + (y + h) + 'Z';
+  }
+  function shortM(M) { return R.MS[Number(M.split('-')[1]) - 1]; }
+
+  function barChart(rows, sel) {
+    var W = 360, H = 210, pl = 46, pr = 6, pt = 10, pb = 26, iw = W - pl - pr, ih = H - pt - pb;
+    var mx = niceCeil(Math.max.apply(null, rows.map(function (r) { return Math.max(r.planned, r.goal, r.saved); }).concat([1])));
+    function y(v) { return pt + ih - (v / mx) * ih; }
+    var gw = iw / rows.length, bw = Math.max(4, Math.floor((gw - 8) / 3) - 2), o = '';
+    [0, mx / 2, mx].forEach(function (t) {
+      o += '<line class="' + (t === 0 ? 'axis' : 'grid') + '" x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(t) + '" y2="' + y(t) + '"/><text x="' + (pl - 6) + '" y="' + (y(t) + 4) + '" text-anchor="end" font-size="11">' + R.brlShort(t) + '</text>';
+    });
+    rows.forEach(function (r, i) {
+      var gx = pl + i * gw, cx = gx + gw / 2, bx = cx - (3 * bw + 4) / 2, on = r.M === sel;
+      if (on) o += '<rect x="' + (gx + 1) + '" y="' + pt + '" width="' + (gw - 2) + '" height="' + ih + '" rx="6" fill="var(--accent-soft)"/>';
+      [[r.planned, 's1'], [r.goal, 's2'], [r.saved, 's3']].forEach(function (b, k) {
+        var x = bx + k * (bw + 2), h = (b[0] / mx) * ih;
+        o += '<path d="' + topRoundedBar(x, pt + ih - h, bw, h, 3) + '" fill="var(--' + b[1] + ')"/>';
+      });
+      o += '<text x="' + cx + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11.5"' + (on ? ' style="font-weight:700;fill:var(--ink)"' : '') + '>' + shortM(r.M) + '</text>';
+      o += '<rect class="hit" data-act="chartSel" data-m="' + r.M + '" x="' + gx + '" y="0" width="' + gw + '" height="' + H + '"/>';
+    });
+    return '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Despesas previstas, meta de guardar e valor guardado em cada mês">' + o + '</svg>';
+  }
+
+  function lineChart(rows, goal, sel) {
+    var W = 360, H = 210, pl = 46, pr = 14, pt = 22, pb = 26, iw = W - pl - pr, ih = H - pt - pb, n = rows.length;
+    var all = [goal];
+    rows.forEach(function (r) { all.push(r.cumPlan); if (r.cumAct != null) all.push(r.cumAct); if (r.cumFc != null) all.push(r.cumFc); });
+    var mx = niceCeil(Math.max.apply(null, all));
+    function x(i) { return n > 1 ? pl + i * (iw / (n - 1)) : pl + iw / 2; }
+    function y(v) { return pt + ih - (v / mx) * ih; }
+    function path(key) {
+      var d = '', pen = false;
+      rows.forEach(function (r, i) { if (r[key] == null) { pen = false; return; } d += (pen ? 'L' : 'M') + x(i).toFixed(1) + ',' + y(r[key]).toFixed(1); pen = true; });
+      return d;
+    }
+    var o = '';
+    [0, mx / 2, mx].forEach(function (t) {
+      o += '<line class="' + (t === 0 ? 'axis' : 'grid') + '" x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(t) + '" y2="' + y(t) + '"/><text x="' + (pl - 6) + '" y="' + (y(t) + 4) + '" text-anchor="end" font-size="11">' + R.brlShort(t) + '</text>';
+    });
+    o += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(goal) + '" y2="' + y(goal) + '" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="2 4"/><text x="' + (W - pr) + '" y="' + (y(goal) - 6) + '" text-anchor="end" font-size="11.5" style="fill:var(--ink)">Meta ' + R.brlShort(goal) + '</text>';
+    var si = -1; rows.forEach(function (r, i) { if (r.M === sel) si = i; });
+    if (si >= 0) o += '<line x1="' + x(si) + '" x2="' + x(si) + '" y1="' + pt + '" y2="' + (pt + ih) + '" stroke="var(--accent)" stroke-width="1.5" opacity=".5"/>';
+    o += '<path d="' + path('cumPlan') + '" fill="none" stroke="var(--s1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
+    o += '<path d="' + path('cumFc') + '" fill="none" stroke="var(--s3)" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round"/>';
+    o += '<path d="' + path('cumAct') + '" fill="none" stroke="var(--s3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
+    rows.forEach(function (r, i) {
+      if (r.cumAct != null) o += '<circle cx="' + x(i) + '" cy="' + y(r.cumAct) + '" r="4" fill="var(--s3)" stroke="var(--surface)" stroke-width="2"/>';
+      if (r.M === sel) o += '<circle cx="' + x(i) + '" cy="' + y(r.cumPlan) + '" r="4" fill="var(--s1)" stroke="var(--surface)" stroke-width="2"/>';
+      o += '<text x="' + x(i) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11.5"' + (r.M === sel ? ' style="font-weight:700;fill:var(--ink)"' : '') + '>' + shortM(r.M) + '</text>';
+      var cw = n > 1 ? iw / (n - 1) : iw;
+      o += '<rect class="hit" data-act="chartSel" data-m="' + r.M + '" x="' + (x(i) - cw / 2) + '" y="0" width="' + cw + '" height="' + H + '"/>';
+    });
+    return '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Evolução do dinheiro guardado para a meta comparada com o planejado e com a meta total">' + o + '</svg>';
+  }
+
+  function monthStatus(st) {
+    var diff = R.r2(st.savedTrip - st.goal);
+    if (st.goal <= 0) return { k: 'neutral', t: 'Sem meta' };
+    if (diff > 0.004) return { k: 'good', t: 'Acima da meta (+' + brl(diff) + ')' };
+    if (diff >= -0.004) return { k: 'good', t: 'Meta cumprida' };
+    if (!st.feasible) return { k: 'bad', t: 'Meta maior que o disponível' };
+    if (st.rel === 'past') return { k: 'bad', t: 'Abaixo da meta (−' + brl(-diff) + ')' };
+    if (st.rel === 'current') return { k: 'warn', t: 'Faltam ' + brl(-diff) };
+    return { k: 'info', t: 'Planejado' };
+  }
+
+  function viewPlan() {
+    var td = today(), s = state.settings, months = R.planMonths(state), rows = R.chartSeries(state, td);
+    var sel = ui.chartSel && months.indexOf(ui.chartSel) >= 0 ? ui.chartSel : (months.indexOf(ui.month) >= 0 ? ui.month : months[0]);
+    var r = rows.filter(function (x) { return x.M === sel; })[0] || rows[0];
+    var goal = R.r2(Number(s.ticketsGoal) + Number(s.spendGoal));
+    function swatch(c) { return '<span><i style="background:var(--' + c + ')"></i>'; }
+
+    var h = '<section class="card"><h2>Despesas e economia por mês</h2>' + barChart(rows, sel) +
+      '<div class="chart-legend">' + swatch('s1') + 'Despesas previstas</span>' + swatch('s2') + 'Meta de guardar</span>' + swatch('s3') + 'Guardei</span></div>' +
+      '<div class="chart-read"><b>' + esc(R.monthName(r.M)) + '</b>Despesas ' + brl(r.planned) + ' · meta de guardar ' + brl(r.goal) + ' · guardei ' + brl(r.saved) + '</div></section>';
+
+    h += '<section class="card"><h2>Evolução da meta</h2>' + lineChart(rows, goal, sel) +
+      '<div class="chart-legend">' + swatch('s1') + 'Planejado</span>' + swatch('s3') + 'Guardado de verdade</span><span><i style="background:none;border-top:2px dashed var(--s3);border-radius:0;height:0;width:14px"></i>Previsão</span></div>' +
+      '<div class="chart-read"><b>' + esc(R.monthName(r.M)) + '</b>Planejado até aqui ' + brl(r.cumPlan) + ' · ' + (r.cumAct != null ? 'guardado ' + brl(r.cumAct) : 'ainda sem registro neste mês') + (r.cumFc != null && r.cumAct == null ? ' · previsão ' + brl(r.cumFc) : '') + '</div></section>';
+
+    h += '<p class="sub" style="margin:2px 4px 0">Toque em um mês para ajustar o salário e a meta daquele mês.</p>';
+    R.planMonthsFor(state, ui.planExtra).forEach(function (M) {
+      var st = R.monthStats(state, M, td), ms = monthStatus(st);
+      h += '<button class="card mcard' + (M === ui.month ? ' sel' : '') + '" data-act="monthAdj" data-m="' + M + '"><div class="hd"><h3>' + esc(R.monthName(M).replace(/^./, function (c) { return c.toUpperCase(); })) + '</h3>' + pill(ms.k, ms.t) + '</div>' +
+        '<dl class="mgrid" style="margin-bottom:0">' +
+        '<div><dt>Salário previsto' + (st.plannedSalary !== Number(s.salary) ? ' (ajustado)' : '') + '</dt><dd>' + brl(st.plannedSalary) + '</dd></div>' +
+        '<div><dt>Despesas previstas</dt><dd>' + brl(st.planned) + '</dd></div>' +
+        '<div><dt>Despesas pagas</dt><dd>' + brl(st.paid) + '</dd></div>' +
+        '<div><dt>Pretendo guardar' + (R.planFor(state, M).customGoal ? ' (ajustado)' : '') + '</dt><dd>' + brl(st.goal) + '</dd></div>' +
+        '<div><dt>Realmente guardei</dt><dd>' + brl(st.savedTrip) + '</dd></div>' +
+        '<div><dt>Saldo restante</dt><dd class="' + neg(st.free).trim() + '">' + brl(st.free) + '</dd></div></dl></button>';
+    });
+    h += '<button class="btn block" data-act="planMore">' + svg('plus', 18) + 'Adicionar mais 12 meses</button>';
+    return h;
+  }
+
+  /* ================= ASSISTENTE FINANCEIRO ================= */
+  var SUGGEST = ['Quanto falta para minha meta?', 'Qual porcentagem da meta já alcancei?', 'Se eu guardar R$ 250 por mês, em quanto tempo atinjo a meta?', 'Quanto terei guardado daqui a 6 meses?', 'Quanto preciso guardar por mês para fechar no prazo?'];
+  function fmtMsg(t) { return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>'); }
+  function viewIA() {
+    var h = '<section class="card"><h2>Assistente Financeiro</h2><p class="sub" style="margin:0">Pergunte sobre sua meta e faça simulações. As respostas usam os números do seu app e contas com os valores que você escrever. Funciona no próprio aparelho, sem internet e sem custo.</p></section>';
+    if (!ui.chat.length) {
+      h += '<section class="card"><h2>Experimente perguntar</h2><div class="chips">' + SUGGEST.map(function (q) { return '<button class="chip" data-act="askChip" data-q="' + esc(q) + '">' + esc(q) + '</button>'; }).join('') + '</div></section>';
+    } else {
+      h += '<div class="chat" id="chatList">' + ui.chat.map(function (m) { return '<div class="msg ' + m.r + '">' + fmtMsg(m.t) + '</div>'; }).join('') + '</div>' +
+        '<button class="link" data-act="askClear" style="align-self:flex-start">Limpar conversa</button>';
+    }
+    h += '<div class="composer"><input class="inp" id="askInput" type="text" enterkeyhint="send" autocomplete="off" placeholder="Digite sua pergunta" aria-label="Pergunta ao assistente" value="' + esc(ui.draft) + '"><button class="btn primary" data-act="askSend">Enviar</button></div>';
+    return h;
+  }
+  function sendAsk(text) {
+    var q = String(text == null ? '' : text).trim();
+    if (!q) { toast('Digite uma pergunta'); return; }
+    var a;
+    try { a = R.ask(state, q, today()); } catch (e) { a = 'Não consegui calcular isso agora. Tente reescrever a pergunta com os valores, por exemplo: "se eu guardar R$ 250 por mês, em quanto tempo atinjo a meta?".'; }
+    ui.chat.push({ r: 'u', t: q }); ui.chat.push({ r: 'a', t: a }); ui.draft = '';
+    renderView();
+    var el = $('#askInput'); if (el) el.focus();
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+
+  /* ================= PASSO A PASSO ================= */
+  var TOURKEY = 'rumo-ao-chile:tour';
+  var TOUR = [
+    { title: 'Bem-vindo!', text: 'Este é o Rumo aos Meus Sonhos. Em poucos passos você define sua meta, registra o que guarda e acompanha o caminho. Vamos?' },
+    { tab: 'chile', sel: '[data-act="editGoal"]', title: '1. Defina sua meta', text: 'Toque aqui para dar um nome à sua meta (viagem, carro, casa…), escolher a imagem, o valor e os prazos.' },
+    { tab: 'home', sel: '[data-act="newIncome"]', title: '2. Registre o salário', text: 'Quando o salário cair, toque em “Recebi”. Ele entra no caixa do mês.' },
+    { tab: 'home', sel: '[data-act="newSaving"]', title: '3. Registre o que guardou', text: 'Toque em “Guardei” sempre que separar dinheiro para a meta. É isso que faz a barra de progresso andar.' },
+    { tab: 'home', sel: '#fab', title: '4. Registre despesas', text: 'O botão + anota uma despesa. Contas que se repetem todo mês podem ser cadastradas na aba Mais.' },
+    { tab: 'plan', sel: '#nav [data-tab="plan"]', title: '5. Veja o plano mês a mês', text: 'Na aba Plano você ajusta salário e meta de cada mês e pode avançar quantos meses quiser.' },
+    { tab: 'ia', sel: '#askInput', title: '6. Pergunte ao Assistente', text: 'Escreva perguntas como “se eu guardar R$ 250 por mês, em quanto tempo chego lá?”. Ele calcula com os seus dados.' },
+    { tab: 'more', sel: '#rtUrl, [data-act="rtInvite"]', title: '7. Use em mais de um aparelho', text: 'Aqui você liga a sincronização (opcional) e faz o backup dos seus dados.' },
+    { title: 'Tudo pronto!', text: 'Vamos começar definindo a sua meta. Para rever este passo a passo, abra Mais > Ver passo a passo.' }
+  ];
+  var tour = null;
+  function tourEl() { return document.getElementById('tour'); }
+  function tourSeen() { try { return localStorage.getItem(TOURKEY) === '1'; } catch (e) { return false; } }
+  function tourEnd() {
+    var t = tourEl(); if (t) t.remove();
+    tour = null;
+    try { localStorage.setItem(TOURKEY, '1'); } catch (e) { /* ok */ }
+  }
+  function tourStart() { tour = { i: 0 }; tourShow(); }
+  function tourShow() {
+    var s = TOUR[tour.i], last = tour.i === TOUR.length - 1;
+    if (ui.sheet) closeSheet();
+    if (s.tab && ui.tab !== s.tab) { ui.tab = s.tab; renderAll(); window.scrollTo(0, 0); }
+    var t = tourEl();
+    if (!t) { t = document.createElement('div'); t.id = 'tour'; document.body.appendChild(t); }
+    t.innerHTML = '<div class="tb"></div><div class="th" hidden></div><div class="tc" role="dialog" aria-modal="true" aria-label="Passo a passo">' +
+      '<span class="dots">Passo ' + (tour.i + 1) + ' de ' + TOUR.length + '</span><h3>' + esc(s.title) + '</h3><p>' + esc(s.text) + '</p>' +
+      '<div class="btn-row">' + (tour.i > 0 ? '<button class="btn ghost sm" data-act="tourPrev">Voltar</button>' : '<button class="btn ghost sm" data-act="tourSkip">Pular</button>') +
+      '<button class="btn primary sm" data-act="tourNext">' + (last ? 'Definir minha meta' : 'Próximo') + '</button></div>' +
+      (tour.i > 0 && !last ? '<button class="link" data-act="tourSkip" style="align-self:flex-start;padding:0">Pular tutorial</button>' : '') + '</div>';
+    tourPlace();
+  }
+  function tourPlace() {
+    var t = tourEl(); if (!tour || !t) return;
+    var s = TOUR[tour.i], el = s.sel ? document.querySelector(s.sel) : null;
+    var hole = t.querySelector('.th'), card = t.querySelector('.tc'), tb = t.querySelector('.tb');
+    if (!el) { hole.hidden = true; tb.style.background = 'rgba(5,12,22,.62)'; card.style.top = Math.max(16, (window.innerHeight - card.offsetHeight) / 2) + 'px'; return; }
+    tb.style.background = 'transparent';
+    try { el.scrollIntoView({ block: 'center' }); } catch (e) { /* ok */ }
+    var r = el.getBoundingClientRect(), pd = 6;
+    hole.hidden = false;
+    hole.style.left = (r.left - pd) + 'px'; hole.style.top = (r.top - pd) + 'px';
+    hole.style.width = (r.width + pd * 2) + 'px'; hole.style.height = (r.height + pd * 2) + 'px';
+    var ch = card.offsetHeight, below = r.bottom + pd + 14;
+    card.style.top = (below + ch <= window.innerHeight - 8 ? below : Math.max(8, r.top - pd - 14 - ch)) + 'px';
+  }
+
+  /* ================= MAIS ================= */
+  function numField(label, key, val, hint) {
+    return '<div class="field"><label for="s_' + key + '">' + label + '</label><input class="inp" id="s_' + key + '" inputmode="decimal" autocomplete="off" data-set="' + key + '" value="' + esc(val) + '">' + (hint ? '<span class="hint">' + hint + '</span>' : '') + '</div>';
+  }
+  function sw(on, act, attrs, label) {
+    return '<div class="sw-row"><span>' + label + '</span><button class="switch" role="switch" aria-checked="' + on + '" aria-label="' + esc(label) + '" data-act="' + act + '" ' + attrs + '></button></div>';
+  }
+  function viewMore() {
+    var s = state.settings, tp = state.recurring.filter(function (r) { return r.kind === 'transport'; })[0];
+    var h = '<section class="card"><h2>Salário e meta</h2><div class="grid2">' +
+      numField('Salário mensal (R$)', 'salary', R.toInput(s.salary)) + numField('Guardar por mês (R$)', 'monthlyGoal', R.toInput(s.monthlyGoal)) +
+      '</div><p class="hint" style="margin:10px 0 0">Para mudar só um mês, use a aba Plano.</p></section>';
+
+    h += '<section class="card"><h2>Transporte para o trabalho</h2><div class="grid2">' +
+      numField('Passagem (R$)', 'fare', R.toInput(s.fare)) + numField('Uber (R$)', 'uber', R.toInput(s.uber)) +
+      numField('Dias por semana', 'days', String(s.days)) + numField('Semanas por mês', 'weeks', String(s.weeks).replace('.', ',')) + '</div>' +
+      '<div class="row total" style="margin-top:12px"><div class="l">' + brl(R.transportDaily(s)) + ' por dia × ' + s.days + ' dias × ' + String(s.weeks).replace('.', ',') + ' semanas</div><div class="v">' + brl(R.transportMonthly(s)) + '</div></div>' +
+      (tp ? sw(tp.active, 'toggleRec', 'data-id="' + tp.id + '" data-k="active"', 'Contar no orçamento') + sw(tp.confirmed, 'toggleRec', 'data-id="' + tp.id + '" data-k="confirmed"', 'Valor confirmado (desligue se for estimativa)') : '') + '</section>';
+
+    var recs = state.recurring.filter(function (r) { return r.kind !== 'transport'; });
+    h += '<section class="card"><h2>Despesas que se repetem todo mês</h2>' + (recs.length ? recs.map(function (r) {
+      return '<div class="rec"><div class="rt"><b>' + esc(r.name) + '</b><button class="btn sm danger" data-act="delRec" data-id="' + r.id + '" aria-label="Excluir ' + esc(r.name) + '">Excluir</button></div>' +
+        '<div class="field"><label for="a_' + r.id + '">Valor por mês (R$)</label><input class="inp" id="a_' + r.id + '" inputmode="decimal" autocomplete="off" data-set="rec:' + r.id + ':amount" value="' + R.toInput(r.amount) + '"></div>' +
+        sw(r.active, 'toggleRec', 'data-id="' + r.id + '" data-k="active"', 'Contar no orçamento') + sw(r.confirmed, 'toggleRec', 'data-id="' + r.id + '" data-k="confirmed"', 'Valor confirmado (desligue se for estimativa)') + '</div>';
+    }).join('') : '<div class="empty">Nenhuma despesa fixa cadastrada.</div>') +
+      '<button class="btn block" style="margin-top:8px" data-act="newFixed">' + svg('plus', 18) + 'Nova despesa fixa</button></section>';
+
+    var used = {}; state.expenses.forEach(function (e) { used[e.cat] = true; }); state.recurring.forEach(function (r) { used[r.cat] = true; });
+    h += '<section class="card"><h2>Categorias</h2><div class="chips">' + state.cats.map(function (c) {
+      var custom = R.DEFAULT_CATS.indexOf(c) < 0;
+      return '<span class="chip" style="display:inline-flex;align-items:center;gap:6px">' + esc(c) + (custom && !used[c] ? '<button data-act="delCat" data-c="' + esc(c) + '" aria-label="Excluir categoria ' + esc(c) + '" style="display:grid;place-items:center">' + svg('x', 14) + '</button>' : '') + '</span>';
+    }).join('') + '</div><div style="display:flex;gap:10px;margin-top:12px"><input class="inp" id="newCat" placeholder="Nova categoria" maxlength="30" autocomplete="off"><button class="btn" data-act="addCat">Adicionar</button></div></section>';
+
+    h += '<section class="card"><h2>Tutorial</h2><button class="btn block" data-act="tourStart">Ver passo a passo</button></section>';
+    h += rtCard();
+    h += '<section class="card"><h2>Seus dados</h2>' + syncLine() +
+      '<p class="hint" style="margin:10px 0 12px">Tudo o que você registra é salvo na hora. Quando o app abre dentro da sua conta, os dados ficam guardados nela e também neste aparelho. Sem a conta, ficam só neste aparelho e podem sumir se você limpar os dados do navegador, então faça um backup de vez em quando.</p>' +
+      '<div class="btn-row"><button class="btn" data-act="backup">Backup e restauração</button><button class="btn danger" data-act="reset">Apagar tudo</button></div></section>';
+    return h;
+  }
+
+  /* ================= painéis inferiores ================= */
+  function openSheet(kind, data) { ui.sheet = { kind: kind, data: data || {} }; renderSheet(); }
+  function closeSheet() { ui.sheet = null; $('#sheet').hidden = true; $('#scrim').hidden = true; $('#sheet').innerHTML = ''; }
+  function collect() {
+    if (!ui.sheet) return;
+    document.querySelectorAll('#sheet [data-f]').forEach(function (el) { ui.sheet.data[el.dataset.f] = el.value; });
+  }
+  function shHead(t) { return '<div class="grab"></div><div class="hd"><h3>' + esc(t) + '</h3><button class="x" data-act="close" aria-label="Fechar">' + svg('x', 20) + '</button></div>'; }
+  function inp(f, label, val, o) {
+    o = o || {};
+    return '<div class="field"><label for="f_' + f + '">' + label + '</label><input class="inp' + (o.cls ? ' ' + o.cls : '') + '" id="f_' + f + '" data-f="' + f + '" ' + (o.type ? 'type="' + o.type + '"' : 'inputmode="' + (o.mode || 'text') + '"') + ' autocomplete="off" value="' + esc(val == null ? '' : val) + '"' + (o.ph ? ' placeholder="' + esc(o.ph) + '"' : '') + '>' + (o.hint ? '<span class="hint">' + o.hint + '</span>' : '') + '</div>';
+  }
+  function segBtns(k, cur, opts) {
+    return '<div class="seg" role="group">' + opts.map(function (o) { return '<button data-act="set" data-k="' + k + '" data-v="' + o[0] + '" aria-pressed="' + (cur === o[0]) + '">' + o[1] + '</button>'; }).join('') + '</div>';
+  }
+  function delBlock(d, label) {
+    if (!d.id) return '';
+    return '<button class="btn danger block" data-act="' + (d.confirmDel ? 'delDo' : 'delAsk') + '">' + (d.confirmDel ? 'Toque de novo para confirmar' : label) + '</button>';
+  }
+
+  function renderSheet() {
+    var sh = ui.sheet; if (!sh) return;
+    var d = sh.data, h = '';
+    if (sh.kind === 'expense') {
+      var title = d.id ? 'Editar despesa' : (d.recId ? 'Despesa prevista' : 'Nova despesa');
+      h = shHead(title) +
+        inp('amount', 'Valor (R$)', d.amount, { cls: 'money', mode: 'decimal', ph: '0,00' }) +
+        inp('name', 'Nome (opcional)', d.name, { ph: 'Ex.: Lanche, Uber, mensalidade' }) +
+        '<div class="field"><span class="lbl">Categoria</span><div class="chips">' + state.cats.map(function (c) { return '<button class="chip" data-act="set" data-k="cat" data-v="' + esc(c) + '" aria-pressed="' + (d.cat === c) + '">' + esc(c) + '</button>'; }).join('') + '</div>' +
+        (d.cat === R.FUND_CAT ? '<span class="hint">Sai do dinheiro guardado para a meta, não do salário do mês.</span>' : '') + '</div>' +
+        '<div class="grid2">' + inp('date', 'Data', d.date, { type: 'date' }) + '<div class="field"><span class="lbl">Situação</span>' + segBtns('status', d.status, [['paga', 'Paga'], ['pendente', 'Pendente']]) + '</div></div>' +
+        '<details' + (d.moreOpen ? ' open' : '') + '><summary>Mais opções</summary><div class="stack"><div class="field"><span class="lbl">Tipo</span>' + segBtns('type', d.type, [['variavel', 'Variável'], ['fixa', 'Fixa']]) + '</div>' +
+        sw(!!d.estimate, 'flip', 'data-k="estimate"', 'Valor ainda é uma estimativa') +
+        (!d.id && !d.recId && d.type === 'fixa' ? sw(!!d.repeat, 'flip', 'data-k="repeat"', 'Repetir todos os meses') : '') +
+        inp('note', 'Observação (opcional)', d.note, {}) + '</div></details>' +
+        (d.recId && !d.id ? '<p class="hint" style="margin:0">Ao salvar, este valor passa a valer só para este mês.</p>' : '') +
+        '<div class="err" id="sheetErr" role="alert"></div><button class="btn primary block" data-act="saveExpense">Salvar</button>' + delBlock(d, d.recId ? 'Voltar ao valor previsto' : 'Excluir despesa');
+    } else if (sh.kind === 'income') {
+      var ps = R.planFor(state, R.mk(d.date || today())).salary;
+      h = shHead(d.id ? 'Editar recebimento' : 'Recebi dinheiro') +
+        inp('amount', 'Valor (R$)', d.amount, { cls: 'money', mode: 'decimal', ph: '0,00' }) +
+        (ps > 0 && !d.id ? '<div class="chips"><button class="chip" data-act="fillAmount" data-v="' + R.toInput(ps) + '">Salário previsto ' + brl(ps) + '</button></div>' : '') +
+        inp('desc', 'De onde veio', d.desc, { ph: 'Salário' }) + inp('date', 'Data', d.date, { type: 'date' }) +
+        '<div class="err" id="sheetErr" role="alert"></div><button class="btn primary block" data-act="saveIncome">Salvar</button>' + delBlock(d, 'Excluir recebimento');
+    } else if (sh.kind === 'saving') {
+      var gm = R.planFor(state, R.mk(d.date || today())).goal;
+      h = shHead(d.id ? 'Editar economia' : 'Guardei dinheiro') +
+        inp('amount', 'Valor (R$)', d.amount, { cls: 'money', mode: 'decimal', ph: '0,00' }) +
+        (gm > 0 && !d.id ? '<div class="chips"><button class="chip" data-act="fillAmount" data-v="' + R.toInput(gm) + '">Meta do mês ' + brl(gm) + '</button></div>' : '') +
+        '<div class="field"><span class="lbl">Para onde foi</span>' + segBtns('dest', d.dest, [['viagem', gname()], ['reserva', 'Reserva geral']]) + '</div>' +
+        inp('date', 'Data', d.date, { type: 'date' }) + inp('desc', 'Observação (opcional)', d.desc, {}) +
+        '<p class="hint" style="margin:0">Guardar dinheiro não conta como despesa: ele sai do saldo disponível, mas não entra no total de gastos.</p>' +
+        '<div class="err" id="sheetErr" role="alert"></div><button class="btn primary block" data-act="saveSaving">Salvar</button>' + delBlock(d, 'Excluir economia');
+    } else if (sh.kind === 'goal') {
+      h = shHead('Meta e prazos') +
+        inp('goalName', 'Nome da meta', d.goalName, { ph: 'Ex.: Meu carro, Casa própria' }) +
+        '<div class="field"><span class="lbl">Tipo da meta (define a imagem)</span><div class="chips">' + [['viagem', 'Viagem'], ['carro', 'Carro'], ['casa', 'Casa'], ['estudos', 'Estudos'], ['outro', 'Outro']].map(function (g) { return '<button class="chip" data-act="set" data-k="goalType" data-v="' + g[0] + '" aria-pressed="' + (d.goalType === g[0]) + '">' + g[1] + '</button>'; }).join('') + '</div></div>' +
+        '<div class="grid2">' + inp('ticketsGoal', 'Passagens (R$)', d.ticketsGoal, { mode: 'decimal' }) + inp('spendGoal', 'Gastos na viagem (R$)', d.spendGoal, { mode: 'decimal' }) + '</div>' +
+        '<div class="grid2">' + inp('ticketsDeadline', 'Comprar passagens até', d.ticketsDeadline, { type: 'date' }) + inp('finalDeadline', 'Juntar tudo até', d.finalDeadline, { type: 'date' }) + '</div>' +
+        '<div class="grid2">' + inp('monthlyGoal', 'Guardar por mês (R$)', d.monthlyGoal, { mode: 'decimal' }) + inp('startMonth', 'Início do plano', d.startMonth, { type: 'month' }) + '</div>' +
+        '<p class="hint" style="margin:0">O mês do prazo conta como mês de economia. Tudo é recalculado ao salvar.</p>' +
+        '<div class="err" id="sheetErr" role="alert"></div><button class="btn primary block" data-act="saveGoal">Salvar</button>';
+    } else if (sh.kind === 'goaltotal') {
+      var gt = R.tripStats(state, today());
+      h = shHead('Editar valor da meta') +
+        '<div class="row total" style="margin:0"><div class="l">Meta atual<small>já guardado: ' + brl(gt.saved) + ' (não muda)</small></div><div class="v">' + brl(gt.goal) + '</div></div>' +
+        inp('total', 'Novo valor da meta (R$)', d.total, { cls: 'money', mode: 'decimal', ph: '0,00', hint: 'A diferença entra em “Gastos na viagem”. Se o novo valor for menor que as passagens (' + brl(state.settings.ticketsGoal) + '), as passagens também são ajustadas. O dinheiro já guardado não é alterado.' }) +
+        '<div class="err" id="sheetErr" role="alert"></div><div class="btn-row"><button class="btn ghost" data-act="close">Cancelar</button><button class="btn primary" data-act="saveGoalTotal">Confirmar</button></div>';
+    } else if (sh.kind === 'monthadj') {
+      var pl = R.planFor(state, d.M);
+      h = shHead('Ajustar ' + R.monthName(d.M)) +
+        inp('salary', 'Salário previsto (R$)', d.salary, { mode: 'decimal', ph: R.toInput(state.settings.salary), hint: 'Em branco usa o valor padrão (' + brl(state.settings.salary) + ').' }) +
+        inp('goal', 'Quanto pretendo guardar (R$)', d.goal, { mode: 'decimal', ph: R.toInput(state.settings.monthlyGoal), hint: 'Em branco usa o valor padrão (' + brl(state.settings.monthlyGoal) + ').' }) +
+        '<div class="err" id="sheetErr" role="alert"></div><button class="btn primary block" data-act="saveMonthAdj">Salvar</button>' +
+        '<button class="btn block" data-act="gotoMonth" data-m="' + d.M + '">Ver despesas deste mês</button>';
+    } else if (sh.kind === 'months') {
+      var firstM = R.monthList(state)[0], yr = ui.pickYear, mchips = '';
+      for (var mi = 1; mi <= 12; mi++) {
+        var MM = yr + '-' + ('0' + mi).slice(-2);
+        mchips += '<button class="chip" data-act="gotoMonth" data-m="' + MM + '" aria-pressed="' + (MM === ui.month) + '"' + (MM < firstM ? ' disabled' : '') + '>' + R.MS[mi - 1].charAt(0).toUpperCase() + R.MS[mi - 1].slice(1) + '</button>';
+      }
+      h = shHead('Escolher mês') +
+        '<div class="stepper" style="align-self:center"><button data-act="pickYear" data-d="-1" aria-label="Ano anterior"' + (yr <= Number(firstM.slice(0, 4)) ? ' disabled' : '') + '>' + svg('left', 20) + '</button><span class="mlabel" style="padding:0 10px;font-weight:600">' + yr + '</span><button data-act="pickYear" data-d="1" aria-label="Próximo ano">' + svg('right', 20) + '</button></div>' +
+        '<div class="chips" style="justify-content:center">' + mchips + '</div>';
+    } else if (sh.kind === 'backup') {
+      h = shHead('Backup e restauração') +
+        '<p class="sub" style="margin:0">Este texto é uma cópia de todos os seus dados. Guarde em um lugar seguro (por exemplo, nas suas notas). Para restaurar, cole o texto aqui e toque em Restaurar.</p>' +
+        '<textarea class="inp" id="f_backup" data-f="backup" spellcheck="false" aria-label="Texto do backup">' + esc(d.backup) + '</textarea>' +
+        '<div class="err" id="sheetErr" role="alert"></div><div class="btn-row"><button class="btn primary" data-act="copyBackup">Copiar</button><button class="btn ' + (d.confirmRestore ? 'danger' : 'ghost') + '" data-act="restore">' + (d.confirmRestore ? 'Toque de novo para substituir' : 'Restaurar do texto') + '</button></div>';
+    } else if (sh.kind === 'invite') {
+      h = shHead('Link de convite') +
+        '<p class="sub" style="margin:0">Abra este link em outro aparelho (no Chrome) para ver e editar os mesmos dados. Quem tiver o link acessa tudo, então envie só para quem você confia.</p>' +
+        '<input class="inp" id="f_invite" readonly value="' + esc(rt ? rtLink() : '') + '" aria-label="Link de convite">' +
+        '<div class="err" id="sheetErr" role="alert"></div><div class="btn-row"><button class="btn primary" data-act="copyInvite">Copiar link</button><button class="btn ghost" data-act="close">Fechar</button></div>';
+    } else if (sh.kind === 'reset') {
+      h = shHead('Apagar todos os dados?') +
+        '<p style="margin:0">Isso apaga despesas, recebimentos, economias e ajustes, e volta os valores iniciais. Não dá para desfazer. Se quiser guardar uma cópia, faça o backup antes.</p>' +
+        (rt ? '<p class="err" style="margin:0">Atenção: a sincronização está ligada. Apagar aqui também apaga os dados de todos os outros aparelhos.</p>' : '') +
+        '<div class="btn-row"><button class="btn ghost" data-act="close">Cancelar</button><button class="btn danger" data-act="resetDo">Apagar tudo</button></div>';
+    }
+    var el = $('#sheet');
+    el.innerHTML = '<div class="sh gut">' + h + '</div>';
+    el.hidden = false; $('#scrim').hidden = false;
+    if (d.focus) { var f = el.querySelector('[data-f="' + d.focus + '"]'); d.focus = null; if (f) setTimeout(function () { f.focus(); }, 60); }
+  }
+  function sheetErr(msg) { var e = $('#sheetErr'); if (e) e.textContent = msg; }
+
+  function expenseDraft(o) {
+    return Object.assign({ id: null, recId: null, amount: '', name: '', cat: 'Outros', date: defaultDateIn(ui.month), status: 'paga', type: 'variavel', estimate: false, repeat: false, note: '', focus: 'amount' }, o || {});
+  }
+
+  /* ================= salvar ================= */
+  function afterSave(date, msg) {
+    var M = R.mk(date);
+    closeSheet(); fixMonth(); if (M >= R.monthList(state)[0]) ui.month = M;
+    renderAll(); toast(msg);
+  }
+  function saveExpense() {
+    collect(); var d = ui.sheet.data, amount = R.parseBR(d.amount);
+    if (isNaN(amount) || amount < 0 || (amount === 0 && !d.recId)) return sheetErr('Digite um valor maior que zero.');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date || '')) return sheetErr('Escolha a data.');
+    var name = (d.name || '').trim() || d.cat;
+    var e = { id: d.id || R.uid(), name: name, amount: R.r2(amount), cat: d.cat, date: d.date, type: d.type, status: d.status, confirmed: !d.estimate, note: (d.note || '').trim() };
+    if (d.recId) e.recId = d.recId;
+    if (d.repeat && !d.id && !d.recId) {
+      var r = { id: R.uid(), name: name, cat: d.cat, kind: 'fixed', amount: e.amount, active: true, confirmed: e.confirmed };
+      state.recurring.push(r);
+      if (e.status === 'paga' || R.mk(e.date) < state.settings.startMonth) { e.recId = r.id; R.upsert(state.expenses, e); }
+    } else R.upsert(state.expenses, e);
+    save(); afterSave(e.date, 'Despesa salva em ' + R.monthLbl(R.mk(e.date)));
+  }
+  function saveIncome() {
+    collect(); var d = ui.sheet.data, a = R.parseBR(d.amount);
+    if (!(a > 0)) return sheetErr('Digite um valor maior que zero.');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date || '')) return sheetErr('Escolha a data.');
+    R.upsert(state.incomes, { id: d.id || R.uid(), date: d.date, amount: R.r2(a), desc: (d.desc || '').trim() || 'Salário' });
+    save(); afterSave(d.date, 'Recebimento salvo');
+  }
+  function saveSaving() {
+    collect(); var d = ui.sheet.data, a = R.parseBR(d.amount);
+    if (!(a > 0)) return sheetErr('Digite um valor maior que zero.');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date || '')) return sheetErr('Escolha a data.');
+    R.upsert(state.savings, { id: d.id || R.uid(), date: d.date, amount: R.r2(a), dest: d.dest, desc: (d.desc || '').trim() });
+    save(); afterSave(d.date, d.dest === 'reserva' ? 'Guardado na reserva' : 'Guardado para a meta');
+  }
+  function saveGoal() {
+    collect(); var d = ui.sheet.data;
+    var t = R.parseBR(d.ticketsGoal), sp = R.parseBR(d.spendGoal), mg = R.parseBR(d.monthlyGoal);
+    if ([t, sp, mg].some(function (x) { return isNaN(x) || x < 0; })) return sheetErr('Confira os valores: use números iguais ou maiores que zero.');
+    if (!d.ticketsDeadline || !d.finalDeadline || !/^\d{4}-\d{2}$/.test(d.startMonth || '')) return sheetErr('Preencha as datas e o início do plano.');
+    if (d.ticketsDeadline > d.finalDeadline) return sheetErr('O prazo das passagens não pode ser depois do prazo final.');
+    var s = state.settings;
+    var gn = String(d.goalName || '').trim();
+    if (!gn) return sheetErr('Dê um nome para a meta.');
+    s.goalName = gn.slice(0, 40);
+    s.goalType = GICON[d.goalType] ? d.goalType : 'outro';
+    s.ticketsGoal = R.r2(t); s.spendGoal = R.r2(sp); s.monthlyGoal = R.r2(mg);
+    s.ticketsDeadline = d.ticketsDeadline; s.finalDeadline = d.finalDeadline; s.startMonth = d.startMonth;
+    save(); closeSheet(); fixMonth(); ui.chartSel = null; renderAll(); toast('Meta atualizada e valores recalculados');
+  }
+  function saveGoalTotal() {
+    collect(); var d = ui.sheet.data, v = R.parseBR(d.total);
+    if (isNaN(v) || v <= 0) return sheetErr('Digite um valor maior que zero.');
+    var s = state.settings, t = Number(s.ticketsGoal);
+    v = R.r2(v);
+    if (v >= t) s.spendGoal = R.r2(v - t); else { s.ticketsGoal = v; s.spendGoal = 0; }
+    save(); closeSheet(); renderAll(); toast('Meta atualizada para ' + brl(v));
+  }
+  function saveMonthAdj() {
+    collect(); var d = ui.sheet.data, p = {};
+    var sv = String(d.salary || '').trim(), gv = String(d.goal || '').trim();
+    if (sv) { var a = R.parseBR(sv); if (isNaN(a) || a < 0) return sheetErr('Salário inválido.'); p.salary = R.r2(a); }
+    if (gv) { var b = R.parseBR(gv); if (isNaN(b) || b < 0) return sheetErr('Meta inválida.'); p.goal = R.r2(b); }
+    if (p.salary == null && p.goal == null) delete state.plan[d.M]; else state.plan[d.M] = p;
+    save(); closeSheet(); renderAll(); toast('Mês ajustado');
+  }
+
+  /* ================= eventos ================= */
+  function findItem(id) { return R.monthItems(state, ui.month).filter(function (i) { return i.id === id; })[0]; }
+
+  function act(a, b) {
+    var d = ui.sheet ? ui.sheet.data : null, id = b.dataset.id;
+    switch (a) {
+      case 'tab': ui.tab = b.dataset.tab; renderAll(); window.scrollTo(0, 0); break;
+      case 'goChile': ui.tab = 'chile'; renderAll(); window.scrollTo(0, 0); break;
+      case 'prevM': case 'nextM': {
+        var first = R.monthList(state)[0], nm = R.addMonths(ui.month, a === 'nextM' ? 1 : -1);
+        if (nm >= first) { ui.month = nm; renderAll(); } break;
+      }
+      case 'pickM': ui.pickYear = Number(ui.month.slice(0, 4)); openSheet('months'); break;
+      case 'pickYear': ui.pickYear += Number(b.dataset.d); renderSheet(); break;
+      case 'planMore': ui.planExtra += 12; renderAll(); break;
+      case 'gotoMonth': ui.month = b.dataset.m; ui.tab = (ui.sheet && ui.sheet.kind === 'monthadj') ? 'desp' : ui.tab; closeSheet(); renderAll(); window.scrollTo(0, 0); break;
+      case 'alertsAll': ui.alertsAll = !ui.alertsAll; renderAll(); break;
+      case 'filter': ui.filter = b.dataset.v; renderAll(); break;
+      case 'chartSel': ui.chartSel = b.dataset.m; renderAll(); break;
+      case 'close': closeSheet(); break;
+      case 'newExpense': openSheet('expense', expenseDraft()); break;
+      case 'newFixed': openSheet('expense', expenseDraft({ type: 'fixa', repeat: true, status: 'pendente', moreOpen: true })); break;
+      case 'newIncome': openSheet('income', { amount: '', desc: 'Salário', date: defaultDateIn(ui.month), focus: 'amount' }); break;
+      case 'newSaving': openSheet('saving', { amount: '', dest: 'viagem', desc: '', date: defaultDateIn(ui.month), focus: 'amount' }); break;
+      case 'editItem': {
+        var it = findItem(id); if (!it) break;
+        openSheet('expense', expenseDraft({ id: it.virtual ? null : it.id, recId: it.recId || null, amount: R.toInput(it.amount), name: it.name, cat: it.cat, date: it.virtual ? defaultDateIn(ui.month) : it.date, status: it.virtual ? 'pendente' : it.status, type: it.type, estimate: !it.confirmed, note: it.note || '', focus: null, moreOpen: !it.confirmed }));
+        break;
+      }
+      case 'togglePay': {
+        var item = findItem(id); if (!item) break;
+        var wasPaid = item.status === 'paga';
+        R.togglePaid(state, item, defaultDateIn(ui.month)); save(); renderAll(); toast(wasPaid ? 'Marcada como pendente' : 'Marcada como paga'); break;
+      }
+      case 'editMv': {
+        if (b.dataset.k === 'in') { var x = state.incomes.filter(function (v) { return v.id === id; })[0]; if (x) openSheet('income', { id: x.id, amount: R.toInput(x.amount), desc: x.desc, date: x.date }); }
+        else { var y = state.savings.filter(function (v) { return v.id === id; })[0]; if (y) openSheet('saving', { id: y.id, amount: R.toInput(y.amount), dest: y.dest || 'viagem', desc: y.desc || '', date: y.date }); }
+        break;
+      }
+      case 'editGoal': {
+        var s = state.settings;
+        openSheet('goal', { goalName: gname(), goalType: gtype(), ticketsGoal: R.toInput(s.ticketsGoal), spendGoal: R.toInput(s.spendGoal), ticketsDeadline: s.ticketsDeadline, finalDeadline: s.finalDeadline, monthlyGoal: R.toInput(s.monthlyGoal), startMonth: s.startMonth }); break;
+      }
+      case 'monthAdj': {
+        var M = b.dataset.m, p = state.plan[M] || {};
+        ui.month = M;
+        openSheet('monthadj', { M: M, salary: p.salary != null ? R.toInput(p.salary) : '', goal: p.goal != null ? R.toInput(p.goal) : '' }); break;
+      }
+      case 'set': collect(); d[b.dataset.k] = b.dataset.v; renderSheet(); break;
+      case 'flip': collect(); d[b.dataset.k] = !d[b.dataset.k]; d.moreOpen = true; renderSheet(); break;
+      case 'fillAmount': collect(); d.amount = b.dataset.v; renderSheet(); break;
+      case 'saveExpense': saveExpense(); break;
+      case 'saveIncome': saveIncome(); break;
+      case 'saveSaving': saveSaving(); break;
+      case 'saveGoal': saveGoal(); break;
+      case 'editGoalTotal': openSheet('goaltotal', { total: R.toInput(R.tripStats(state, today()).goal), focus: 'total' }); break;
+      case 'saveGoalTotal': saveGoalTotal(); break;
+      case 'saveMonthAdj': saveMonthAdj(); break;
+      case 'delAsk': collect(); d.confirmDel = true; renderSheet(); break;
+      case 'delDo': {
+        var k = ui.sheet.kind, label = '';
+        if (k === 'expense') { R.removeById(state.expenses, d.id); label = d.recId ? 'Voltou ao valor previsto' : 'Despesa excluída'; }
+        else if (k === 'income') { R.removeById(state.incomes, d.id); label = 'Recebimento excluído'; }
+        else { R.removeById(state.savings, d.id); label = 'Economia excluída'; }
+        save(); closeSheet(); fixMonth(); renderAll(); toast(label); break;
+      }
+      case 'toggleRec': {
+        var r = state.recurring.filter(function (v) { return v.id === id; })[0];
+        if (r) { r[b.dataset.k] = !r[b.dataset.k]; save(); renderAll(); toast(b.dataset.k === 'active' ? (r.active ? r.name + ' entrou no orçamento' : r.name + ' saiu do orçamento') : (r.confirmed ? 'Valor confirmado' : 'Marcado como estimativa')); }
+        break;
+      }
+      case 'delRec': {
+        if (b.dataset.armed === '1') { R.removeById(state.recurring, id); save(); renderAll(); toast('Despesa fixa excluída'); }
+        else { b.dataset.armed = '1'; b.textContent = 'Confirmar'; }
+        break;
+      }
+      case 'addCat': {
+        var inpEl = $('#newCat'), nm = (inpEl.value || '').trim();
+        if (!nm) { toast('Digite o nome da categoria'); break; }
+        if (state.cats.some(function (c) { return c.toLowerCase() === nm.toLowerCase(); })) { toast('Essa categoria já existe'); break; }
+        state.cats.push(nm); save(); renderAll(); toast('Categoria criada'); break;
+      }
+      case 'delCat': state.cats = state.cats.filter(function (c) { return c !== b.dataset.c; }); save(); renderAll(); toast('Categoria excluída'); break;
+      case 'backup': openSheet('backup', { backup: JSON.stringify(state) }); break;
+      case 'copyBackup': {
+        collect(); var txt = d.backup;
+        var ta = $('#f_backup');
+        var done = function () { toast('Backup copiado'); };
+        var fallback = function () { if (ta) { ta.focus(); ta.select(); } toast('Selecione o texto e copie'); };
+        try { navigator.clipboard.writeText(txt).then(done, fallback); } catch (e) { fallback(); }
+        break;
+      }
+      case 'restore': {
+        collect();
+        var parsed = null;
+        try { parsed = JSON.parse(d.backup); } catch (e) { parsed = null; }
+        if (!parsed || typeof parsed !== 'object' || !parsed.settings || !Array.isArray(parsed.expenses)) { d.confirmRestore = false; renderSheet(); return sheetErr('Esse texto não parece um backup válido.'); }
+        if (!d.confirmRestore) { d.confirmRestore = true; renderSheet(); break; }
+        state = R.migrate(parsed); save(); closeSheet(); fixMonth(); renderAll(); toast('Dados restaurados'); break;
+      }
+      case 'rtOn': {
+        var u = normUrl(($('#rtUrl') || {}).value);
+        var cand = { url: u, room: newRoom() };
+        if (!rtOk(cand)) { toast('Endereço inválido. Copie de novo do Firebase'); break; }
+        rt = cand; rtSave(); rtStart(); renderAll(); openSheet('invite'); break;
+      }
+      case 'rtInvite': openSheet('invite'); break;
+      case 'copyInvite': {
+        var inv = $('#f_invite'), link = rt ? rtLink() : '';
+        var okc = function () { toast('Link copiado'); };
+        var fbk = function () { if (inv) { inv.focus(); inv.select(); } toast('Selecione o link e copie'); };
+        try { navigator.clipboard.writeText(link).then(okc, fbk); } catch (e) { fbk(); }
+        break;
+      }
+      case 'rtOff': {
+        if (b.dataset.armed === '1') { rtStop(); renderAll(); toast('Sincronização desligada. Os dados ficam neste aparelho'); }
+        else { b.dataset.armed = '1'; b.textContent = 'Toque de novo para desligar'; }
+        break;
+      }
+      case 'askSend': sendAsk(($('#askInput') || {}).value); break;
+      case 'askChip': sendAsk(b.dataset.q); break;
+      case 'askClear': ui.chat = []; renderView(); break;
+      case 'tourStart': tourStart(); break;
+      case 'tourPrev': if (tour && tour.i > 0) { tour.i--; tourShow(); } break;
+      case 'tourSkip': tourEnd(); break;
+      case 'tourNext':
+        if (!tour) break;
+        if (tour.i >= TOUR.length - 1) { tourEnd(); ui.tab = 'chile'; renderAll(); window.scrollTo(0, 0); act('editGoal', b); }
+        else { tour.i++; tourShow(); }
+        break;
+      case 'reset': openSheet('reset'); break;
+      case 'resetDo': state = R.defaultState(); try { localStorage.removeItem(KEY); } catch (e) { /* ok */ } save(); closeSheet(); ui.month = initialMonth(); renderAll(); toast('Dados apagados'); break;
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-act]') : null;
+    if (b) act(b.dataset.act, b);
+  });
+  document.addEventListener('change', function (e) {
+    var t = e.target, key = t.dataset && t.dataset.set; if (!key) return;
+    var s = state.settings, v;
+    if (key.indexOf('rec:') === 0) {
+      var p = key.split(':'), r = state.recurring.filter(function (x) { return x.id === p[1]; })[0];
+      v = R.parseBR(t.value);
+      if (!r || isNaN(v) || v < 0) { toast('Valor inválido'); renderAll(); return; }
+      r.amount = R.r2(v);
+    } else {
+      v = R.parseBR(t.value);
+      if (isNaN(v) || v < 0) { toast('Valor inválido'); renderAll(); return; }
+      if (key === 'days') { if (v > 7) { toast('Use de 0 a 7 dias por semana'); renderAll(); return; } s.days = Math.round(v); }
+      else if (key === 'weeks') { if (v > 6) { toast('Use no máximo 6 semanas por mês'); renderAll(); return; } s.weeks = v; }
+      else s[key] = R.r2(v);
+    }
+    save(); renderAll(); toast('Atualizado e recalculado');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && ui.sheet) closeSheet();
+    if (e.key === 'Enter' && e.target && e.target.id === 'askInput') { e.preventDefault(); sendAsk(e.target.value); }
+  });
+  document.addEventListener('input', function (e) { if (e.target && e.target.id === 'askInput') ui.draft = e.target.value; });
+  $('#scrim').addEventListener('click', closeSheet);
+  $('#fab').addEventListener('click', function () { act('newExpense', $('#fab')); });
+
+  /* ================= sincronização entre aparelhos (Firebase Realtime Database via REST) ================= */
+  var RTKEY = 'rumo-ao-chile:rt';
+  var COLLS = ['settings', 'plan', 'cats', 'expenses', 'incomes', 'savings', 'recurring'];
+  var rt = null, rtSynced = null, rtFirst = true, rtBusy = false, rtAgain = false, rtTimer = null, rtES = null, rtDefer = false, rtPoll = null;
+
+  function normUrl(u) { try { return new URL(String(u || '').trim()).origin; } catch (e) { return ''; } }
+  function rtOk(c) {
+    return !!c && typeof c.url === 'string' && typeof c.room === 'string' &&
+      (/^https:\/\/[a-z0-9-]+(\.[a-z0-9-]+)*\.(firebaseio\.com|firebasedatabase\.app)$/i.test(c.url) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(c.url)) &&
+      /^[A-Za-z0-9_-]{12,64}$/.test(c.room);
+  }
+  function rtSave() { try { if (rt) localStorage.setItem(RTKEY, JSON.stringify(rt)); else localStorage.removeItem(RTKEY); } catch (e) { /* ok */ } }
+  function newRoom() {
+    var a = new Uint8Array(18), c = window.crypto;
+    if (c && c.getRandomValues) c.getRandomValues(a); else for (var i = 0; i < a.length; i++) a[i] = Math.floor(Math.random() * 256);
+    return Array.prototype.map.call(a, function (v) { return ('0' + v.toString(36)).slice(-2); }).join('');
+  }
+  function rtLink() { return location.origin + location.pathname + '#u=' + encodeURIComponent(rt.url) + '&r=' + rt.room; }
+  function rtBase() { return rt.url + '/rooms/' + rt.room; }
+  function j(x) { return x === undefined ? undefined : JSON.parse(JSON.stringify(x)); }
+  function canon(v) {
+    if (v === null || typeof v !== 'object') return JSON.stringify(v);
+    if (Array.isArray(v)) return '[' + v.map(canon).join(',') + ']';
+    return '{' + Object.keys(v).sort().map(function (k) { return JSON.stringify(k) + ':' + canon(v[k]); }).join(',') + '}';
+  }
+  function ckey(n) { return encodeURIComponent(n).replace(/\./g, '%2E'); }
+  function persistLocal() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ok */ } }
+
+  function toShape(S) {
+    var o = { settings: {}, plan: {}, cats: {}, expenses: {}, incomes: {}, savings: {}, recurring: {} };
+    Object.keys(S.settings).forEach(function (k) { o.settings[k] = S.settings[k]; });
+    Object.keys(S.plan).forEach(function (k) { o.plan[k] = S.plan[k]; });
+    S.cats.forEach(function (c) { o.cats[ckey(c)] = c; });
+    ['expenses', 'incomes', 'savings', 'recurring'].forEach(function (c) { S[c].forEach(function (x) { o[c][x.id] = x; }); });
+    return o;
+  }
+  function applyShape(F) {
+    var d = R.defaultState();
+    state.settings = Object.assign({}, d.settings, F.settings);
+    state.plan = F.plan;
+    var names = Object.keys(F.cats).map(function (k) { return F.cats[k]; });
+    var keep = state.cats.filter(function (c) { return names.indexOf(c) >= 0; });
+    names.forEach(function (c) { if (keep.indexOf(c) < 0) keep.push(c); });
+    if (keep.indexOf(R.FUND_CAT) < 0) keep.push(R.FUND_CAT);
+    state.cats = keep;
+    ['expenses', 'incomes', 'savings', 'recurring'].forEach(function (c) {
+      var m = F[c], seen = {}, arr = [];
+      state[c].forEach(function (x) { if (m[x.id]) { arr.push(m[x.id]); seen[x.id] = 1; } });
+      Object.keys(m).sort().forEach(function (id) { if (!seen[id]) arr.push(m[id]); });
+      state[c] = arr;
+    });
+  }
+
+  function rtFetch(path, opt) {
+    var ctl = new AbortController(), to = setTimeout(function () { ctl.abort(); }, 12000);
+    opt = opt || {}; opt.signal = ctl.signal; opt.cache = 'no-store';
+    return fetch(rtBase() + path + '.json', opt).then(function (r) {
+      clearTimeout(to);
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    }, function (e) { clearTimeout(to); throw e; });
+  }
+  function rtSchedule(ms) { if (!rt) return; clearTimeout(rtTimer); rtTimer = setTimeout(rtSync, ms == null ? 400 : ms); }
+
+  function rtSync() {
+    if (!rt) return Promise.resolve();
+    if (rtBusy) { rtAgain = true; return Promise.resolve(); }
+    rtBusy = true;
+    var room = rt.room;
+    return rtFetch('').then(function (raw) {
+      if (!rt || rt.room !== room) return;
+      var Rm = raw && typeof raw === 'object' ? raw : {}, remote = {};
+      COLLS.forEach(function (c) { remote[c] = Rm[c] && typeof Rm[c] === 'object' ? Rm[c] : {}; });
+      var local = j(toShape(state));
+      if (rtFirst || !rtSynced) {
+        // primeira vez neste aparelho: o que já existe na nuvem vale; o que só existe aqui é enviado
+        rtSynced = {};
+        COLLS.forEach(function (c) { rtSynced[c] = {}; Object.keys(remote[c]).forEach(function (k) { if (k in local[c]) rtSynced[c][k] = local[c][k]; }); });
+        rtFirst = false;
+      }
+      var final = {}, push = {};
+      COLLS.forEach(function (c) {
+        var L = local[c], S = rtSynced[c] || {}, Rr = remote[c], p = {}, f = j(Rr);
+        Object.keys(L).forEach(function (k) { if (!(k in S) || canon(L[k]) !== canon(S[k])) p[k] = L[k]; });
+        Object.keys(S).forEach(function (k) { if (!(k in L)) p[k] = null; });
+        Object.keys(p).forEach(function (k) {
+          if (p[k] === null) delete f[k]; else f[k] = p[k];
+          var rv = (k in Rr) ? canon(Rr[k]) : null, pv = p[k] === null ? null : canon(p[k]);
+          if (rv !== pv) push[c + '/' + k] = p[k];
+        });
+        final[c] = f;
+      });
+      if (canon(local) !== canon(final)) { applyShape(final); persistLocal(); rtRenderSoon(); }
+      var keys = Object.keys(push);
+      var done = keys.length ? rtFetch('', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(push) }) : Promise.resolve();
+      return done.then(function () {
+        var ns = {};
+        COLLS.forEach(function (c) { ns[c] = j(remote[c]); });
+        keys.forEach(function (k) { var i = k.indexOf('/'), c = k.slice(0, i), id = k.slice(i + 1); if (push[k] === null) delete ns[c][id]; else ns[c][id] = push[k]; });
+        rtSynced = ns;
+        try { localStorage.setItem('rumo-ao-chile:rt-synced:' + room, JSON.stringify(ns)); } catch (e) { /* ok */ }
+        setSync('rt-live');
+      });
+    }).catch(function (e) {
+      setSync(/http 40[13]/.test(String(e && e.message)) ? 'rt-denied' : 'rt-offline');
+      rtSchedule(12000);
+    }).then(function () {
+      rtBusy = false;
+      if (rtAgain) { rtAgain = false; rtSchedule(150); }
+    });
+  }
+
+  function rtListen() {
+    if (rtES) { try { rtES.close(); } catch (e) { /* ok */ } rtES = null; }
+    if (!rt || typeof EventSource === 'undefined') return;
+    try {
+      rtES = new EventSource(rtBase() + '.json');
+      var h = function () { rtSchedule(250); };
+      rtES.addEventListener('put', h); rtES.addEventListener('patch', h);
+    } catch (e) { rtES = null; }
+  }
+  function rtStart() {
+    if (!rt) return;
+    var s = null;
+    try { s = JSON.parse(localStorage.getItem('rumo-ao-chile:rt-synced:' + rt.room) || 'null'); } catch (e) { s = null; }
+    if (s && typeof s === 'object') { rtSynced = s; rtFirst = false; } else { rtSynced = null; rtFirst = true; }
+    setSync('rt-connecting'); rtListen(); rtSchedule(0);
+    clearInterval(rtPoll);
+    rtPoll = setInterval(function () { if (!document.hidden) rtSchedule(0); }, 30000);
+  }
+  function rtStop() {
+    if (rtES) { try { rtES.close(); } catch (e) { /* ok */ } rtES = null; }
+    clearInterval(rtPoll); clearTimeout(rtTimer);
+    try { if (rt) localStorage.removeItem('rumo-ao-chile:rt-synced:' + rt.room); } catch (e) { /* ok */ }
+    rt = null; rtSynced = null; rtSave(); setSync('local');
+  }
+  function rtRenderSoon() {
+    var a = document.activeElement;
+    if (a && a.closest && a.closest('#view') && /INPUT|TEXTAREA|SELECT/.test(a.tagName)) { rtDefer = true; return; }
+    fixMonth(); renderTop(); renderView(); renderNav();
+  }
+  document.addEventListener('focusout', function () {
+    if (!rtDefer) return;
+    setTimeout(function () {
+      var a = document.activeElement;
+      if (a && a.closest && a.closest('#view') && /INPUT|TEXTAREA|SELECT/.test(a.tagName)) return;
+      rtDefer = false; fixMonth(); renderTop(); renderView(); renderNav();
+    }, 60);
+  });
+  window.addEventListener('online', function () { rtSchedule(0); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) rtSchedule(0); });
+
+  function rtCard() {
+    if (rt) {
+      return '<section class="card"><h2>Sincronização entre aparelhos</h2>' + syncLine() +
+        '<p class="hint" style="margin:10px 0 12px">Tudo o que você registra aparece nos outros aparelhos que abrirem o seu link, em poucos segundos. Quem tiver o link vê e edita os mesmos dados.</p>' +
+        '<div class="btn-row"><button class="btn primary" data-act="rtInvite">Link de convite</button><button class="btn ghost" data-act="rtOff">Desligar</button></div></section>';
+    }
+    return '<section class="card"><h2>Sincronização entre aparelhos</h2>' +
+      '<p class="hint" style="margin:0 0 12px">Opcional. Cole o endereço do seu banco de dados do Firebase para os aparelhos mostrarem sempre os mesmos dados.</p>' +
+      '<div class="field"><label for="rtUrl">Endereço do banco de dados</label><input class="inp" id="rtUrl" inputmode="url" autocomplete="off" autocapitalize="off" placeholder="https://seu-projeto-default-rtdb.firebaseio.com"></div>' +
+      '<button class="btn primary block" style="margin-top:12px" data-act="rtOn">Ligar sincronização</button></section>';
+  }
+
+  (function readInvite() {
+    var h = location.hash || '';
+    if (h.indexOf('u=') < 0 || h.indexOf('r=') < 0) return;
+    var p = new URLSearchParams(h.replace(/^#/, ''));
+    var c = { url: normUrl(p.get('u')), room: p.get('r') || '' };
+    if (rtOk(c)) { rt = c; rtSave(); }
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* ok */ }
+  })();
+  try { var rtRaw = JSON.parse(localStorage.getItem(RTKEY) || 'null'); if (!rt && rtOk(rtRaw)) rt = rtRaw; } catch (e) { /* ok */ }
+
+  renderAll();
+  if (rt) rtStart(); else initCloud();
+  if (state.updated === 0 && !tourSeen()) setTimeout(tourStart, 500);
+})();
+
+</script>
+
+</body></html>
